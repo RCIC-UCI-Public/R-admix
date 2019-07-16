@@ -1,0 +1,18 @@
+# Builds the module for R. It first includes all the definitions
+# for the R build and then overwrites specific keys
+!include R.yaml
+!include /opt/rcic/include/rcic-module.yaml
+---
+- package: R Module
+  pkgname: "{{ name }}_{{version}}-module"
+  description: >
+    module for {{ name }} version {{ version }} OpenBLAS 
+    version {{versions.OpenBLAS}}.  
+  module:
+    name: "{{ version }}"
+    path: "{{ pkg_defaults.module.path }}/{{ name }}"
+    prepend_path:
+      - "{{ pkg_defaults.module.prepend_path }}"
+  requires:
+    - "{{ name }}_{{ version }}"
+    - rcic-module-support

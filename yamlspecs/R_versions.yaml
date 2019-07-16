@@ -1,0 +1,5 @@
+R: "3.6.1"
+OpenBLAS: "0.3.6"
+ctv: "0.8"
+ctv_release: "5"
+BiocManager: "1.30.4"
