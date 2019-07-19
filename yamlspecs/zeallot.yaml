@@ -1,0 +1,8 @@
+
+!include r-pkg.yaml
+---
+- package: R module zeallot
+  name: zeallot
+  version: "{{ versions.zeallot }}"
+  src_tarball: "{{name}}_{{version}}.{{extension}}"
+  vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}.tar.gz 

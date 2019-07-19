@@ -1,0 +1,8 @@
+
+!include r-pkg.yaml
+---
+- package: R module googleVis
+  name: googleVis
+  version: "{{ versions.googleVis }}"
+  src_tarball: "{{name}}_{{version}}.{{extension}}"
+  vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}.tar.gz 

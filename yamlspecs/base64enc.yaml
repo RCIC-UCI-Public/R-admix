@@ -1,0 +1,10 @@
+
+
+!include r-pkg.yaml
+---
+- package: R module base64enc
+  name: base64enc
+  version: "{{ versions.base64enc }}"
+  release: "{{versions.base64enc_release }}"
+  src_tarball: "{{name}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}-{{release}}.tar.gz 

@@ -1,0 +1,10 @@
+
+
+!include r-pkg.yaml
+---
+- package: R module glmnet
+  name: glmnet
+  version: "{{ versions.glmnet }}"
+  release: "{{versions.glmnet_release }}"
+  src_tarball: "{{name}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}-{{release}}.tar.gz 

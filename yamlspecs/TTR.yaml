@@ -1,0 +1,10 @@
+
+
+!include r-pkg.yaml
+---
+- package: R module TTR
+  name: TTR
+  version: "{{ versions.TTR }}"
+  release: "{{versions.TTR_release }}"
+  src_tarball: "{{name}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}-{{release}}.tar.gz 

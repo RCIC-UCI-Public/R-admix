@@ -1,0 +1,10 @@
+
+
+!include r-pkg.yaml
+---
+- package: R module randomForest
+  name: randomForest
+  version: "{{ versions.randomForest }}"
+  release: "{{versions.randomForest_release }}"
+  src_tarball: "{{name}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}-{{release}}.tar.gz 
