@@ -28,6 +28,12 @@ RTEMPLATE = """
 module load %s;
 echo 'download.packages("%s",destdir="../sources", repos="https://cran.r-project.org")' | R --slave
 """
+
+RDEPENDS = """
+module load %s;
+echo 'download.depedencies("%s",check=FALSE, deplevel="Depends")' | R --slave
+"""
+
 ## This are recommend packages from R-Studio's list of useful packages
 ## https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages 
 groups= {}
@@ -49,6 +55,7 @@ groups['system'].extend(['ps','processx','callr'])
 groups['system'].extend(['gridExtra','png', 'raster', 'sp', 'viridis'])
 groups['system'].extend(['prettyunits','igraph','blob', 'bit','bit64', 'hms'])
 groups['system'].extend(['memoise'])
+groups['system']= ['sys','askpass','openssl', 'httr', 'XML', 'miniCRAN']
 groups['dataload']=["odbc","RMySQL", "RSQLite","RPostgreSQL"]
 groups['dataload'].extend(["XLConnect","xlsx","foreign","haven"])
 groups['datamanip']=["dplyr","tidyr","stringr","lubridate"]

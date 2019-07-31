@@ -1,3 +1,5 @@
+miniCRAN
+BiocManager
 odbc
 RMySQL
 RSQLite
@@ -45,4 +47,3 @@ xts
 quantmod
 Rcpp
 data.table
-Rmpi

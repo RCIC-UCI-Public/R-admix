@@ -1,0 +1,1709 @@
+## 49 desired --> 171 required
+---
+miniCRAN : 
+  version : "0.2.12"
+  requires : 
+    - httr
+    - XML
+    - igraph
+    - assertthat
+    - curl
+    - jsonlite
+    - mime
+    - openssl
+    - R6
+    - magrittr
+    - Matrix
+    - pkgconfig
+    - lattice
+    - askpass
+    - sys
+BiocManager : 
+  version : "1.30.4"
+  requires : 
+odbc : 
+  version : "1.1.6"
+  requires : 
+    - DBI
+    - Rcpp
+    - blob
+    - bit64
+    - hms
+    - BH
+    - bit
+    - prettyunits
+    - rlang
+    - vctrs
+    - pkgconfig
+    - magrittr
+    - assertthat
+    - backports
+    - ellipsis
+    - digest
+    - glue
+    - zeallot
+RMySQL : 
+  version : "0.10.17"
+  requires : 
+    - DBI
+RSQLite : 
+  version : "2.1.2"
+  requires : 
+    - bit64
+    - blob
+    - DBI
+    - memoise
+    - pkgconfig
+    - Rcpp
+    - BH
+    - plogr
+    - bit
+    - prettyunits
+    - rlang
+    - vctrs
+    - digest
+    - magrittr
+    - assertthat
+    - backports
+    - ellipsis
+    - glue
+    - zeallot
+RPostgreSQL : 
+  version : "0.6-2"
+  requires : 
+    - DBI
+XLConnect : 
+  version : "0.2-15"
+  requires : 
+    - XLConnectJars
+    - rJava
+xlsx : 
+  version : "0.6.1"
+  requires : 
+    - rJava
+    - xlsxjars
+foreign : 
+  version : "0.8-71"
+  requires : 
+haven : 
+  version : "2.1.1"
+  requires : 
+    - forcats
+    - hms
+    - Rcpp
+    - readr
+    - tibble
+    - ellipsis
+    - magrittr
+    - rlang
+    - pkgconfig
+    - vctrs
+    - R6
+    - clipr
+    - crayon
+    - BH
+    - cli
+    - fansi
+    - pillar
+    - assertthat
+    - utf8
+    - backports
+    - digest
+    - glue
+    - zeallot
+dplyr : 
+  version : "0.8.3"
+  requires : 
+    - assertthat
+    - glue
+    - magrittr
+    - pkgconfig
+    - R6
+    - Rcpp
+    - rlang
+    - tibble
+    - tidyselect
+    - BH
+    - plogr
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - purrr
+    - utf8
+    - vctrs
+    - backports
+    - ellipsis
+    - digest
+    - zeallot
+tidyr : 
+  version : "0.8.3"
+  requires : 
+    - dplyr
+    - glue
+    - magrittr
+    - purrr
+    - Rcpp
+    - rlang
+    - stringi
+    - tibble
+    - tidyselect
+    - assertthat
+    - pkgconfig
+    - R6
+    - BH
+    - plogr
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - utf8
+    - vctrs
+    - backports
+    - ellipsis
+    - digest
+    - zeallot
+stringr : 
+  version : "1.4.0"
+  requires : 
+    - glue
+    - magrittr
+    - stringi
+lubridate : 
+  version : "1.7.4"
+  requires : 
+    - stringr
+    - Rcpp
+    - glue
+    - magrittr
+    - stringi
+ggplot2 : 
+  version : "3.2.0"
+  requires : 
+    - digest
+    - gtable
+    - lazyeval
+    - MASS
+    - mgcv
+    - reshape2
+    - rlang
+    - scales
+    - tibble
+    - viridisLite
+    - withr
+    - nlme
+    - Matrix
+    - plyr
+    - Rcpp
+    - stringr
+    - labeling
+    - munsell
+    - R6
+    - RColorBrewer
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - pkgconfig
+    - assertthat
+    - lattice
+    - colorspace
+    - utf8
+    - vctrs
+    - glue
+    - magrittr
+    - stringi
+    - backports
+    - ellipsis
+    - zeallot
+ggvis : 
+  version : "0.4.4"
+  requires : 
+    - assertthat
+    - jsonlite
+    - shiny
+    - magrittr
+    - dplyr
+    - lazyeval
+    - htmltools
+    - glue
+    - pkgconfig
+    - R6
+    - Rcpp
+    - rlang
+    - tibble
+    - tidyselect
+    - BH
+    - plogr
+    - digest
+    - httpuv
+    - mime
+    - xtable
+    - sourcetools
+    - later
+    - promises
+    - crayon
+    - cli
+    - fansi
+    - pillar
+    - purrr
+    - utf8
+    - vctrs
+    - backports
+    - ellipsis
+    - zeallot
+rgl : 
+  version : "0.100.26"
+  requires : 
+    - htmlwidgets
+    - htmltools
+    - knitr
+    - jsonlite
+    - shiny
+    - magrittr
+    - crosstalk
+    - manipulateWidget
+    - lazyeval
+    - R6
+    - ggplot2
+    - digest
+    - Rcpp
+    - yaml
+    - evaluate
+    - highr
+    - markdown
+    - stringr
+    - xfun
+    - miniUI
+    - base64enc
+    - codetools
+    - webshot
+    - httpuv
+    - mime
+    - xtable
+    - sourcetools
+    - later
+    - promises
+    - crayon
+    - rlang
+    - gtable
+    - MASS
+    - mgcv
+    - reshape2
+    - scales
+    - tibble
+    - viridisLite
+    - withr
+    - BH
+    - glue
+    - stringi
+    - callr
+    - processx
+    - nlme
+    - Matrix
+    - plyr
+    - labeling
+    - munsell
+    - RColorBrewer
+    - cli
+    - fansi
+    - pillar
+    - pkgconfig
+    - assertthat
+    - lattice
+    - colorspace
+    - utf8
+    - vctrs
+    - ps
+    - backports
+    - ellipsis
+    - zeallot
+htmlwidgets : 
+  version : "1.3"
+  requires : 
+    - htmltools
+    - jsonlite
+    - yaml
+    - digest
+    - Rcpp
+shape : 
+  version : "1.4.4"
+  requires : 
+igraph : 
+  version : "1.2.4.1"
+  requires : 
+    - magrittr
+    - Matrix
+    - pkgconfig
+    - lattice
+magrittr : 
+  version : "1.5"
+  requires : 
+leaflet : 
+  version : "2.0.2"
+  requires : 
+    - base64enc
+    - crosstalk
+    - htmlwidgets
+    - htmltools
+    - magrittr
+    - markdown
+    - png
+    - RColorBrewer
+    - raster
+    - scales
+    - sp
+    - viridis
+    - jsonlite
+    - lazyeval
+    - R6
+    - shiny
+    - ggplot2
+    - digest
+    - Rcpp
+    - yaml
+    - mime
+    - labeling
+    - munsell
+    - viridisLite
+    - lattice
+    - gridExtra
+    - gtable
+    - MASS
+    - mgcv
+    - reshape2
+    - rlang
+    - tibble
+    - withr
+    - colorspace
+    - httpuv
+    - xtable
+    - sourcetools
+    - later
+    - promises
+    - crayon
+    - BH
+    - nlme
+    - Matrix
+    - plyr
+    - stringr
+    - cli
+    - fansi
+    - pillar
+    - pkgconfig
+    - assertthat
+    - utf8
+    - vctrs
+    - glue
+    - stringi
+    - backports
+    - ellipsis
+    - zeallot
+dygraphs : 
+  version : "1.1.1.6"
+  requires : 
+    - magrittr
+    - htmlwidgets
+    - htmltools
+    - zoo
+    - xts
+    - digest
+    - Rcpp
+    - jsonlite
+    - yaml
+    - lattice
+DT : 
+  version : "0.7"
+  requires : 
+    - htmltools
+    - htmlwidgets
+    - magrittr
+    - crosstalk
+    - promises
+    - jsonlite
+    - lazyeval
+    - R6
+    - shiny
+    - ggplot2
+    - digest
+    - Rcpp
+    - yaml
+    - later
+    - rlang
+    - gtable
+    - MASS
+    - mgcv
+    - reshape2
+    - scales
+    - tibble
+    - viridisLite
+    - withr
+    - BH
+    - httpuv
+    - mime
+    - xtable
+    - sourcetools
+    - crayon
+    - nlme
+    - Matrix
+    - plyr
+    - stringr
+    - labeling
+    - munsell
+    - RColorBrewer
+    - cli
+    - fansi
+    - pillar
+    - pkgconfig
+    - assertthat
+    - lattice
+    - colorspace
+    - utf8
+    - vctrs
+    - glue
+    - stringi
+    - backports
+    - ellipsis
+    - zeallot
+diagram : 
+  version : "1.6.4"
+  requires : 
+    - shape
+networkD3 : 
+  version : "0.4"
+  requires : 
+    - htmlwidgets
+    - igraph
+    - magrittr
+    - htmltools
+    - jsonlite
+    - yaml
+    - Matrix
+    - pkgconfig
+    - digest
+    - Rcpp
+    - lattice
+threejs : 
+  version : "0.3.1"
+  requires : 
+    - igraph
+    - htmlwidgets
+    - base64enc
+    - crosstalk
+    - htmltools
+    - jsonlite
+    - lazyeval
+    - R6
+    - shiny
+    - ggplot2
+    - yaml
+    - magrittr
+    - Matrix
+    - pkgconfig
+    - digest
+    - gtable
+    - MASS
+    - mgcv
+    - reshape2
+    - rlang
+    - scales
+    - tibble
+    - viridisLite
+    - withr
+    - Rcpp
+    - lattice
+    - httpuv
+    - mime
+    - xtable
+    - sourcetools
+    - later
+    - promises
+    - crayon
+    - BH
+    - nlme
+    - plyr
+    - stringr
+    - labeling
+    - munsell
+    - RColorBrewer
+    - cli
+    - fansi
+    - pillar
+    - assertthat
+    - colorspace
+    - utf8
+    - vctrs
+    - glue
+    - stringi
+    - backports
+    - ellipsis
+    - zeallot
+googleVis : 
+  version : "0.6.4"
+  requires : 
+    - jsonlite
+car : 
+  version : "3.0-3"
+  requires : 
+    - carData
+    - abind
+    - MASS
+    - mgcv
+    - nnet
+    - pbkrtest
+    - quantreg
+    - maptools
+    - rio
+    - lme4
+    - nlme
+    - Matrix
+    - lattice
+    - boot
+    - minqa
+    - nloptr
+    - Rcpp
+    - RcppEigen
+    - sp
+    - foreign
+    - SparseM
+    - MatrixModels
+    - haven
+    - curl
+    - data.table
+    - readxl
+    - openxlsx
+    - tibble
+    - forcats
+    - hms
+    - readr
+    - zip
+    - cellranger
+    - progress
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - pkgconfig
+    - rlang
+    - rematch
+    - assertthat
+    - ellipsis
+    - magrittr
+    - vctrs
+    - utf8
+    - prettyunits
+    - R6
+    - clipr
+    - BH
+    - backports
+    - digest
+    - glue
+    - zeallot
+mgcv : 
+  version : "1.8-28"
+  requires : 
+    - nlme
+    - Matrix
+    - lattice
+lme4 : 
+  version : "1.1-21"
+  requires : 
+    - Matrix
+    - MASS
+    - lattice
+    - boot
+    - nlme
+    - minqa
+    - nloptr
+    - Rcpp
+    - RcppEigen
+nlme : 
+  version : "3.1-140"
+  requires : 
+    - lattice
+randomForest : 
+  version : "4.6-14"
+  requires : 
+multcomp : 
+  version : "1.4-10"
+  requires : 
+    - mvtnorm
+    - survival
+    - TH.data
+    - sandwich
+    - codetools
+    - zoo
+    - Matrix
+    - MASS
+    - lattice
+vcd : 
+  version : "1.4-4"
+  requires : 
+    - MASS
+    - colorspace
+    - lmtest
+    - zoo
+    - lattice
+glmnet : 
+  version : "2.0-18"
+  requires : 
+    - Matrix
+    - foreach
+    - codetools
+    - iterators
+    - lattice
+survival : 
+  version : "2.44-1.1"
+  requires : 
+    - Matrix
+    - lattice
+caret : 
+  version : "6.0-84"
+  requires : 
+    - lattice
+    - ggplot2
+    - foreach
+    - plyr
+    - ModelMetrics
+    - nlme
+    - reshape2
+    - recipes
+    - withr
+    - codetools
+    - iterators
+    - digest
+    - gtable
+    - lazyeval
+    - MASS
+    - mgcv
+    - rlang
+    - scales
+    - tibble
+    - viridisLite
+    - Rcpp
+    - data.table
+    - dplyr
+    - generics
+    - glue
+    - gower
+    - ipred
+    - lubridate
+    - magrittr
+    - Matrix
+    - purrr
+    - tidyr
+    - tidyselect
+    - timeDate
+    - stringr
+    - assertthat
+    - pkgconfig
+    - R6
+    - BH
+    - plogr
+    - rpart
+    - survival
+    - nnet
+    - class
+    - prodlim
+    - labeling
+    - munsell
+    - RColorBrewer
+    - stringi
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - colorspace
+    - utf8
+    - vctrs
+    - KernSmooth
+    - lava
+    - numDeriv
+    - SQUAREM
+    - backports
+    - ellipsis
+    - zeallot
+shiny : 
+  version : "1.3.2"
+  requires : 
+    - httpuv
+    - mime
+    - jsonlite
+    - xtable
+    - digest
+    - htmltools
+    - R6
+    - sourcetools
+    - later
+    - promises
+    - crayon
+    - rlang
+    - Rcpp
+    - BH
+    - magrittr
+xtable : 
+  version : "1.8-4"
+  requires : 
+sp : 
+  version : "1.3-1"
+  requires : 
+    - lattice
+maptools : 
+  version : "0.9-5"
+  requires : 
+    - sp
+    - foreign
+    - lattice
+maps : 
+  version : "3.3.0"
+  requires : 
+ggmap : 
+  version : "3.0.0"
+  requires : 
+    - ggplot2
+    - RgoogleMaps
+    - png
+    - plyr
+    - rjson
+    - jpeg
+    - digest
+    - scales
+    - dplyr
+    - bitops
+    - glue
+    - httr
+    - stringr
+    - purrr
+    - magrittr
+    - tibble
+    - tidyr
+    - assertthat
+    - pkgconfig
+    - R6
+    - Rcpp
+    - rlang
+    - tidyselect
+    - BH
+    - plogr
+    - gtable
+    - lazyeval
+    - MASS
+    - mgcv
+    - reshape2
+    - viridisLite
+    - withr
+    - curl
+    - jsonlite
+    - mime
+    - openssl
+    - labeling
+    - munsell
+    - RColorBrewer
+    - stringi
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - nlme
+    - Matrix
+    - colorspace
+    - askpass
+    - utf8
+    - vctrs
+    - sys
+    - lattice
+    - backports
+    - ellipsis
+    - zeallot
+zoo : 
+  version : "1.8-6"
+  requires : 
+    - lattice
+xts : 
+  version : "0.11-2"
+  requires : 
+    - zoo
+    - lattice
+quantmod : 
+  version : "0.4-15"
+  requires : 
+    - xts
+    - zoo
+    - TTR
+    - curl
+    - lattice
+Rcpp : 
+  version : "1.0.2"
+  requires : 
+data.table : 
+  version : "1.12.2"
+  requires : 
+httr : 
+  version : "1.4.0"
+  requires : 
+    - curl
+    - jsonlite
+    - mime
+    - openssl
+    - R6
+    - askpass
+    - sys
+XML : 
+  version : "3.98-1.20"
+  requires : 
+assertthat : 
+  version : "0.2.1"
+  requires : 
+curl : 
+  version : "4.0"
+  requires : 
+jsonlite : 
+  version : "1.6"
+  requires : 
+mime : 
+  version : "0.7"
+  requires : 
+openssl : 
+  version : "1.4.1"
+  requires : 
+    - askpass
+    - sys
+R6 : 
+  version : "2.4.0"
+  requires : 
+Matrix : 
+  version : "1.2-17"
+  requires : 
+    - lattice
+pkgconfig : 
+  version : "2.0.2"
+  requires : 
+lattice : 
+  version : "0.20-38"
+  requires : 
+askpass : 
+  version : "1.1"
+  requires : 
+    - sys
+sys : 
+  version : "3.2"
+  requires : 
+DBI : 
+  version : "1.0.0"
+  requires : 
+blob : 
+  version : "1.2.0"
+  requires : 
+    - prettyunits
+    - rlang
+    - vctrs
+    - magrittr
+    - assertthat
+    - backports
+    - ellipsis
+    - digest
+    - glue
+    - zeallot
+bit64 : 
+  version : "0.9-7"
+  requires : 
+    - bit
+hms : 
+  version : "0.5.0"
+  requires : 
+    - pkgconfig
+    - rlang
+    - vctrs
+    - backports
+    - ellipsis
+    - digest
+    - glue
+    - zeallot
+BH : 
+  version : "1.69.0-1"
+  requires : 
+bit : 
+  version : "1.1-14"
+  requires : 
+prettyunits : 
+  version : "1.0.2"
+  requires : 
+    - magrittr
+    - assertthat
+rlang : 
+  version : "0.4.0"
+  requires : 
+vctrs : 
+  version : "0.2.0"
+  requires : 
+    - backports
+    - ellipsis
+    - digest
+    - glue
+    - rlang
+    - zeallot
+backports : 
+  version : "1.1.4"
+  requires : 
+ellipsis : 
+  version : "0.2.0.1"
+  requires : 
+    - rlang
+digest : 
+  version : "0.6.20"
+  requires : 
+glue : 
+  version : "1.3.1"
+  requires : 
+zeallot : 
+  version : "0.1.0"
+  requires : 
+memoise : 
+  version : "1.1.0"
+  requires : 
+    - digest
+plogr : 
+  version : "0.2.0"
+  requires : 
+XLConnectJars : 
+  version : "0.2-15"
+  requires : 
+    - rJava
+rJava : 
+  version : "0.9-11"
+  requires : 
+xlsxjars : 
+  version : "0.6.1"
+  requires : 
+    - rJava
+forcats : 
+  version : "0.4.0"
+  requires : 
+    - ellipsis
+    - magrittr
+    - rlang
+    - tibble
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - pkgconfig
+    - assertthat
+    - utf8
+    - vctrs
+    - backports
+    - digest
+    - glue
+    - zeallot
+readr : 
+  version : "1.3.1"
+  requires : 
+    - Rcpp
+    - tibble
+    - hms
+    - R6
+    - clipr
+    - crayon
+    - BH
+    - pkgconfig
+    - rlang
+    - vctrs
+    - cli
+    - fansi
+    - pillar
+    - assertthat
+    - utf8
+    - backports
+    - ellipsis
+    - digest
+    - glue
+    - zeallot
+tibble : 
+  version : "2.1.3"
+  requires : 
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - pkgconfig
+    - rlang
+    - assertthat
+    - utf8
+    - vctrs
+    - backports
+    - ellipsis
+    - digest
+    - glue
+    - zeallot
+clipr : 
+  version : "0.7.0"
+  requires : 
+crayon : 
+  version : "1.3.4"
+  requires : 
+cli : 
+  version : "1.1.0"
+  requires : 
+    - assertthat
+    - crayon
+fansi : 
+  version : "0.4.0"
+  requires : 
+pillar : 
+  version : "1.4.2"
+  requires : 
+    - cli
+    - crayon
+    - fansi
+    - rlang
+    - utf8
+    - vctrs
+    - assertthat
+    - backports
+    - ellipsis
+    - digest
+    - glue
+    - zeallot
+utf8 : 
+  version : "1.1.4"
+  requires : 
+tidyselect : 
+  version : "0.2.5"
+  requires : 
+    - glue
+    - purrr
+    - rlang
+    - Rcpp
+    - magrittr
+purrr : 
+  version : "0.3.2"
+  requires : 
+    - magrittr
+    - rlang
+stringi : 
+  version : "1.4.3"
+  requires : 
+gtable : 
+  version : "0.3.0"
+  requires : 
+lazyeval : 
+  version : "0.2.2"
+  requires : 
+MASS : 
+  version : "7.3-51.4"
+  requires : 
+reshape2 : 
+  version : "1.4.3"
+  requires : 
+    - plyr
+    - Rcpp
+    - stringr
+    - glue
+    - magrittr
+    - stringi
+scales : 
+  version : "1.0.0"
+  requires : 
+    - labeling
+    - munsell
+    - R6
+    - RColorBrewer
+    - Rcpp
+    - viridisLite
+    - colorspace
+viridisLite : 
+  version : "0.3.0"
+  requires : 
+withr : 
+  version : "2.1.2"
+  requires : 
+plyr : 
+  version : "1.8.4"
+  requires : 
+    - Rcpp
+labeling : 
+  version : "0.3"
+  requires : 
+munsell : 
+  version : "0.5.0"
+  requires : 
+    - colorspace
+RColorBrewer : 
+  version : "1.1-2"
+  requires : 
+colorspace : 
+  version : "1.4-1"
+  requires : 
+htmltools : 
+  version : "0.3.6"
+  requires : 
+    - digest
+    - Rcpp
+httpuv : 
+  version : "1.5.1"
+  requires : 
+    - Rcpp
+    - R6
+    - promises
+    - later
+    - BH
+    - rlang
+    - magrittr
+sourcetools : 
+  version : "0.1.7"
+  requires : 
+later : 
+  version : "0.8.0"
+  requires : 
+    - Rcpp
+    - rlang
+    - BH
+promises : 
+  version : "1.0.1"
+  requires : 
+    - R6
+    - Rcpp
+    - later
+    - rlang
+    - magrittr
+    - BH
+knitr : 
+  version : "1.23"
+  requires : 
+    - evaluate
+    - highr
+    - markdown
+    - stringr
+    - yaml
+    - xfun
+    - mime
+    - glue
+    - magrittr
+    - stringi
+crosstalk : 
+  version : "1.0.0"
+  requires : 
+    - htmltools
+    - jsonlite
+    - lazyeval
+    - R6
+    - shiny
+    - ggplot2
+    - digest
+    - gtable
+    - MASS
+    - mgcv
+    - reshape2
+    - rlang
+    - scales
+    - tibble
+    - viridisLite
+    - withr
+    - Rcpp
+    - httpuv
+    - mime
+    - xtable
+    - sourcetools
+    - later
+    - promises
+    - crayon
+    - BH
+    - nlme
+    - Matrix
+    - magrittr
+    - plyr
+    - stringr
+    - labeling
+    - munsell
+    - RColorBrewer
+    - cli
+    - fansi
+    - pillar
+    - pkgconfig
+    - assertthat
+    - lattice
+    - colorspace
+    - utf8
+    - vctrs
+    - glue
+    - stringi
+    - backports
+    - ellipsis
+    - zeallot
+manipulateWidget : 
+  version : "0.10.0"
+  requires : 
+    - shiny
+    - miniUI
+    - htmltools
+    - htmlwidgets
+    - knitr
+    - base64enc
+    - codetools
+    - webshot
+    - digest
+    - Rcpp
+    - jsonlite
+    - yaml
+    - evaluate
+    - highr
+    - markdown
+    - stringr
+    - xfun
+    - httpuv
+    - mime
+    - xtable
+    - R6
+    - sourcetools
+    - later
+    - promises
+    - crayon
+    - rlang
+    - magrittr
+    - callr
+    - processx
+    - BH
+    - glue
+    - stringi
+    - ps
+yaml : 
+  version : "2.2.0"
+  requires : 
+evaluate : 
+  version : "0.14"
+  requires : 
+highr : 
+  version : "0.8"
+  requires : 
+markdown : 
+  version : "1.0"
+  requires : 
+    - mime
+xfun : 
+  version : "0.8"
+  requires : 
+miniUI : 
+  version : "0.1.1.1"
+  requires : 
+    - shiny
+    - htmltools
+    - digest
+    - Rcpp
+    - httpuv
+    - mime
+    - jsonlite
+    - xtable
+    - R6
+    - sourcetools
+    - later
+    - promises
+    - crayon
+    - rlang
+    - BH
+    - magrittr
+base64enc : 
+  version : "0.1-3"
+  requires : 
+codetools : 
+  version : "0.2-16"
+  requires : 
+webshot : 
+  version : "0.5.1"
+  requires : 
+    - magrittr
+    - jsonlite
+    - callr
+    - processx
+    - R6
+    - ps
+callr : 
+  version : "3.3.1"
+  requires : 
+    - processx
+    - R6
+    - ps
+processx : 
+  version : "3.4.1"
+  requires : 
+    - ps
+    - R6
+ps : 
+  version : "1.3.0"
+  requires : 
+png : 
+  version : "0.1-7"
+  requires : 
+raster : 
+  version : "2.9-23"
+  requires : 
+    - sp
+    - Rcpp
+    - lattice
+viridis : 
+  version : "0.5.1"
+  requires : 
+    - viridisLite
+    - ggplot2
+    - gridExtra
+    - digest
+    - gtable
+    - lazyeval
+    - MASS
+    - mgcv
+    - reshape2
+    - rlang
+    - scales
+    - tibble
+    - withr
+    - nlme
+    - Matrix
+    - plyr
+    - Rcpp
+    - stringr
+    - labeling
+    - munsell
+    - R6
+    - RColorBrewer
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - pkgconfig
+    - assertthat
+    - lattice
+    - colorspace
+    - utf8
+    - vctrs
+    - glue
+    - magrittr
+    - stringi
+    - backports
+    - ellipsis
+    - zeallot
+gridExtra : 
+  version : "2.3"
+  requires : 
+    - gtable
+carData : 
+  version : "3.0-2"
+  requires : 
+abind : 
+  version : "1.4-5"
+  requires : 
+nnet : 
+  version : "7.3-12"
+  requires : 
+pbkrtest : 
+  version : "0.4-7"
+  requires : 
+    - lme4
+    - Matrix
+    - MASS
+    - lattice
+    - boot
+    - nlme
+    - minqa
+    - nloptr
+    - Rcpp
+    - RcppEigen
+quantreg : 
+  version : "5.42.1"
+  requires : 
+    - SparseM
+    - Matrix
+    - MatrixModels
+    - lattice
+rio : 
+  version : "0.5.16"
+  requires : 
+    - foreign
+    - haven
+    - curl
+    - data.table
+    - readxl
+    - openxlsx
+    - tibble
+    - forcats
+    - hms
+    - Rcpp
+    - readr
+    - zip
+    - cellranger
+    - progress
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - pkgconfig
+    - rlang
+    - rematch
+    - assertthat
+    - ellipsis
+    - magrittr
+    - vctrs
+    - utf8
+    - prettyunits
+    - R6
+    - clipr
+    - BH
+    - backports
+    - digest
+    - glue
+    - zeallot
+boot : 
+  version : "1.3-23"
+  requires : 
+minqa : 
+  version : "1.2.4"
+  requires : 
+    - Rcpp
+nloptr : 
+  version : "1.2.1"
+  requires : 
+RcppEigen : 
+  version : "0.3.3.5.0"
+  requires : 
+    - Matrix
+    - Rcpp
+    - lattice
+SparseM : 
+  version : "1.77"
+  requires : 
+MatrixModels : 
+  version : "0.4-1"
+  requires : 
+    - Matrix
+    - lattice
+readxl : 
+  version : "1.3.1"
+  requires : 
+    - cellranger
+    - Rcpp
+    - tibble
+    - progress
+    - rematch
+    - hms
+    - prettyunits
+    - R6
+    - crayon
+    - cli
+    - fansi
+    - pillar
+    - pkgconfig
+    - rlang
+    - assertthat
+    - vctrs
+    - utf8
+    - magrittr
+    - backports
+    - ellipsis
+    - digest
+    - glue
+    - zeallot
+openxlsx : 
+  version : "4.1.0.1"
+  requires : 
+    - Rcpp
+    - zip
+zip : 
+  version : "2.0.3"
+  requires : 
+cellranger : 
+  version : "1.1.0"
+  requires : 
+    - rematch
+    - tibble
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - pkgconfig
+    - rlang
+    - assertthat
+    - utf8
+    - vctrs
+    - backports
+    - ellipsis
+    - digest
+    - glue
+    - zeallot
+progress : 
+  version : "1.2.2"
+  requires : 
+    - hms
+    - prettyunits
+    - R6
+    - crayon
+    - pkgconfig
+    - rlang
+    - vctrs
+    - magrittr
+    - assertthat
+    - backports
+    - ellipsis
+    - digest
+    - glue
+    - zeallot
+rematch : 
+  version : "1.0.1"
+  requires : 
+mvtnorm : 
+  version : "1.0-11"
+  requires : 
+TH.data : 
+  version : "1.0-10"
+  requires : 
+    - survival
+    - MASS
+    - Matrix
+    - lattice
+sandwich : 
+  version : "2.5-1"
+  requires : 
+    - zoo
+    - lattice
+lmtest : 
+  version : "0.9-37"
+  requires : 
+    - zoo
+    - lattice
+foreach : 
+  version : "1.4.7"
+  requires : 
+    - codetools
+    - iterators
+iterators : 
+  version : "1.0.12"
+  requires : 
+ModelMetrics : 
+  version : "1.2.2"
+  requires : 
+    - Rcpp
+    - data.table
+recipes : 
+  version : "0.1.6"
+  requires : 
+    - dplyr
+    - generics
+    - glue
+    - gower
+    - ipred
+    - lubridate
+    - magrittr
+    - Matrix
+    - purrr
+    - rlang
+    - tibble
+    - tidyr
+    - tidyselect
+    - timeDate
+    - withr
+    - assertthat
+    - pkgconfig
+    - R6
+    - Rcpp
+    - BH
+    - plogr
+    - rpart
+    - MASS
+    - survival
+    - nnet
+    - class
+    - prodlim
+    - stringr
+    - lattice
+    - cli
+    - crayon
+    - fansi
+    - pillar
+    - stringi
+    - utf8
+    - vctrs
+    - KernSmooth
+    - lava
+    - numDeriv
+    - SQUAREM
+    - backports
+    - ellipsis
+    - digest
+    - zeallot
+generics : 
+  version : "0.0.2"
+  requires : 
+gower : 
+  version : "0.2.1"
+  requires : 
+ipred : 
+  version : "0.9-9"
+  requires : 
+    - rpart
+    - MASS
+    - survival
+    - nnet
+    - class
+    - prodlim
+    - Rcpp
+    - KernSmooth
+    - lava
+    - Matrix
+    - numDeriv
+    - SQUAREM
+    - lattice
+timeDate : 
+  version : "3043.102"
+  requires : 
+rpart : 
+  version : "4.1-15"
+  requires : 
+class : 
+  version : "7.3-15"
+  requires : 
+    - MASS
+prodlim : 
+  version : "2018.04.18"
+  requires : 
+    - Rcpp
+    - survival
+    - KernSmooth
+    - lava
+    - numDeriv
+    - SQUAREM
+    - Matrix
+    - lattice
+KernSmooth : 
+  version : "2.23-15"
+  requires : 
+lava : 
+  version : "1.6.5"
+  requires : 
+    - numDeriv
+    - survival
+    - SQUAREM
+    - Matrix
+    - lattice
+numDeriv : 
+  version : "2016.8-1.1"
+  requires : 
+SQUAREM : 
+  version : "2017.10-1"
+  requires : 
+RgoogleMaps : 
+  version : "1.4.3"
+  requires : 
+    - png
+rjson : 
+  version : "0.2.20"
+  requires : 
+jpeg : 
+  version : "0.1-8"
+  requires : 
+bitops : 
+  version : "1.0-6"
+  requires : 
+TTR : 
+  version : "0.23-4"
+  requires : 
+    - xts
+    - zoo
+    - curl
+    - lattice

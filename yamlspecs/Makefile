@@ -2,5 +2,42 @@
 # All rights reserved.	
 # This includes the Generic yaml2rpm Makefile - most packaging should
 # be able to use this.
-
 include $(YAML2RPM_HOME)/sys/Makefile
+
+SHELL = /bin/bash
+TMPYAMLS = $(shell find . -maxdepth 1 -name '*.yaml' -not -name R.yaml -not -name R-module.yaml -not -name builddeps.yaml -not -name r-pkg.yaml)
+
+.PHONY: buildall
+
+all: modules.bootstrap bootstrap prep 
+	make BOOTSTRAP_MODULES_FILE=modules.bootstrap2 bootstrap
+
+prep: modules.build 
+	./downloadpkg.py
+
+builddeps.yaml: modules.desired deps.R
+	( module load R; \
+	  cat deps.R | R --slave > $@  )
+
+R_versions.yaml: outversions.yaml 
+	cat outversions.yaml $@.base > $@
+
+buildorder outversions.yaml: builddeps.yaml 
+	./depend.py > buildorder
+
+modules.bootstrap2: buildorder 
+	cat modules.bootstrap.base buildorder  > modules.bootstrap2
+
+modules.bootstrap:
+	cat $@.base > $@
+
+modules.build: modules.bootstrap2 
+	cat modules.bootstrap2 > $@
+	
+clean:
+	-/bin/rm modules.bootstrap modules.bootstrap2 modules.build
+	-/bin/rm $(TMPYAMLS)
+	-/bin/rm buildorder
+	
+veryclean:
+	-/bin/rm builddeps.yaml
