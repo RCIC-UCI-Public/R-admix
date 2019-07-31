@@ -15,9 +15,12 @@ cat(sprintf("---\n"))
 for (pkg in allDeps) 
 {
 	deps <- pkgDep(pkg,availPkgs=allPkgs,suggests=FALSE)
+        pkgInfo = allPkgs[allPkgs[,"Package"] %in% pkg,]
 	cat(sprintf("%s : \n",deps[1]))
+	cat(sprintf("  version : \"%s\"\n",pkgInfo["Version"]))
+	cat(sprintf("  requires : \n"))
         if ( length(deps) == 1 )
 	 	next	
         for (i in 2:length(deps))
-            cat(sprintf("  - %s\n",deps[i]))
+            cat(sprintf("    - %s\n",deps[i]))
 }

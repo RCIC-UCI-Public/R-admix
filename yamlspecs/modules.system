@@ -4,3 +4,4 @@ libXt-devel
 mariadb-devel
 mesa-libGLU-devel
 unixODBC-devel
+postgresql-devel
