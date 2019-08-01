@@ -1,7 +1,7 @@
 ---
 - package: R statistics 
   name: R 
-  versions: !include R_versions.yaml
+  versions: !include R_versions.yaml.base
   version: "{{ versions.R }}"
   extension: tar.gz
   vendor_source: https://cran.cnr.berkeley.edu/src/base/R-3/R-{{ version }}.tar.gz 

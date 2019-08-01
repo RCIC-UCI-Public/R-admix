@@ -9,7 +9,7 @@ TMPYAMLS = $(shell find . -maxdepth 1 -name '*.yaml' -not -name R.yaml -not -nam
 
 .PHONY: buildall
 
-all: modules.bootstrap bootstrap prep 
+all: modules.bootstrap bootstrap R_versions.yaml prep 
 	make BOOTSTRAP_MODULES_FILE=modules.bootstrap2 bootstrap
 
 prep: modules.build 
