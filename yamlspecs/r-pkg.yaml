@@ -1,18 +1,17 @@
 ---
-- package: R module ctv
-  name: ctv 
+- package: R module template 
+  name: r-module-template 
   versions: !include R_versions.yaml
-  version: "{{ versions.ctv }}"
-  release: "{{ versions.ctv_release }}"
+  rpkgname: "{{ name }}"
   extension: tar.gz
   pkgname: "{{name}}_R_{{ versions.R }}"
-  src_tarball: "{{name}}_{{version}}-{{release}}.{{extension}}"
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
   no_src_dir: true
-  vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}-{{release}}.tar.gz 
+  vendor_source: https://cran.r-project.org/src/contrib/{{rpkgname}}_{{version}}-{{release}}.tar.gz 
   description: >
-    {{ name }} version {{ version }} for R version {{ versions.R }}. 
+    {{ rpkgname }} version {{ version }} for R version {{ versions.R }}. 
   libpath: "{{ pkg_defaults.app_path }}/R/{{ versions.R }}/lib64/R/library"
-  root: "{{ libpath }}/{{name}}"
+  root: "{{ libpath }}/{{rpkgname}}"
   build:
     modules:
       - R/{{versions.R}}

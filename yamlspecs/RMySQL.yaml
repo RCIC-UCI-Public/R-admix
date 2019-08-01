@@ -1,8 +1,0 @@
-
-!include r-pkg.yaml
----
-- package: R module RMySQL
-  name: RMySQL
-  version: "{{ versions.RMySQL }}"
-  src_tarball: "{{name}}_{{version}}.{{extension}}"
-  vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}.tar.gz 

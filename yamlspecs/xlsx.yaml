@@ -1,8 +1,0 @@
-
-!include r-pkg.yaml
----
-- package: R module xlsx
-  name: xlsx
-  version: "{{ versions.xlsx }}"
-  src_tarball: "{{name}}_{{version}}.{{extension}}"
-  vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}.tar.gz 
