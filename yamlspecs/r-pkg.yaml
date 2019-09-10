@@ -4,7 +4,7 @@
   versions: !include R_versions.yaml
   rpkgname: "{{ name }}"
   extension: tar.gz
-  pkgname: "{{name}}_R_{{ versions.R }}"
+  pkgname: "R_{{ versions.R }}-{{ name }}"
   src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
   no_src_dir: true
   vendor_source: https://cran.r-project.org/src/contrib/{{rpkgname}}_{{version}}-{{release}}.tar.gz 

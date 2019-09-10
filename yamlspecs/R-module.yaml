@@ -13,6 +13,8 @@
     path: "{{ pkg_defaults.module.path }}/{{ name }}"
     prepend_path:
       - "{{ pkg_defaults.module.prepend_path }}"
+    prereq:
+      - OpenBLAS/{{versions.OpenBLAS}}
   requires:
     - "{{ name }}_{{ version }}"
     - rcic-module-support

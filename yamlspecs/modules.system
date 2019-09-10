@@ -1,3 +1,4 @@
+bzip2-devel
 readline-devel
 libX11-devel
 libXt-devel
@@ -5,3 +6,5 @@ mariadb-devel
 mesa-libGLU-devel
 unixODBC-devel
 postgresql-devel
+xz-devel
+curl-devel

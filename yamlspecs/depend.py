@@ -111,7 +111,7 @@ for pkg in resolved:
             if deps is not None:
                 for p in deps:
                     if p not in syspkgs:
-                        f.write("    - %s_R_%s\n" % (name_mangle(p),R_VERSION))
+                        f.write("    - R_%s-%s\n" % (R_VERSION,name_mangle(p)))
 
             if pkg.pkgname in addModules.keys():
 		f.write(BUILD_OVERRIDE)
