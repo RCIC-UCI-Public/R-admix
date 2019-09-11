@@ -17,6 +17,7 @@
   build:
     modules:
       - OpenBLAS/{{versions.OpenBLAS}}
+      - java/{{ versions.java }}
     configure_args: >
       --enable-R-shlib
       --with-blas
