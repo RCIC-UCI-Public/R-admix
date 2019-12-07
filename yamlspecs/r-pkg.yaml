@@ -2,16 +2,16 @@
 - package: R module template 
   name: r-module-template 
   versions: !include R_versions.yaml
-  rpkgname: "{{ name }}"
+  rpkgname: "{{name}}"
   extension: tar.gz
-  pkgname: "R_{{ versions.R }}-{{ name }}"
+  pkgname: "R_{{versions.R}}-{{name}}"
   src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
   no_src_dir: true
   vendor_source: https://cran.r-project.org/src/contrib/{{rpkgname}}_{{version}}-{{release}}.tar.gz 
   description: >
-    {{ rpkgname }} version {{ version }} for R version {{ versions.R }}. 
-  libpath: "{{ pkg_defaults.app_path }}/R/{{ versions.R }}/lib64/R/library"
-  root: "{{ libpath }}/{{rpkgname}}"
+    {{rpkgname}} version {{version}} for R version {{versions.R}}. 
+  libpath: "{{pkg_defaults.app_path}}/R/{{versions.R}}/lib64/R/library"
+  root: "{{libpath}}/{{rpkgname}}"
   build:
     modules:
       - R/{{versions.R}}
@@ -20,9 +20,9 @@
     target: 
   install:
      makeinstall: >
-       mkdir -p $(ROOT)/{{ libpath }};
-       R CMD INSTALL -l $(ROOT)/{{ libpath }} {{ src_tarball }}
+       mkdir -p $(ROOT)/{{libpath}};
+       R CMD INSTALL -l $(ROOT)/{{libpath}} {{src_tarball}}
   files:
-    -  "{{ root }}"
+    -  "{{root}}"
   rpm: !include rpm.extras.yaml
-  requires: R_{{ versions.R }}
+  requires: R_{{versions.R}}

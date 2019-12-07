@@ -14,7 +14,7 @@ YAMLTEMPLATE="""
 - package: R module MODULE
   name: MODULE
   rpkgname: %s
-  version: "{{ versions.MODULE }}"
+  version: "{{versions.MODULE}}"
   src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
   vendor_source: https://cran.r-project.org/src/contrib/{{rpkgname}}_{{version}}.tar.gz 
 """
@@ -24,8 +24,8 @@ YAMLTEMPLATE_RELEASE="""
 - package: R module MODULE
   name: MODULE
   rpkgname: %s
-  version: "{{ versions.MODULE }}"
-  release: "{{versions.MODULE_release }}"
+  version: "{{versions.MODULE}}"
+  release: "{{versions.MODULE_release}}"
   src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
   vendor_source: https://cran.r-project.org/src/contrib/{{rpkgname}}_{{version}}-{{release}}.tar.gz 
 """
