@@ -3,10 +3,9 @@
 !include rcic-module.yaml
 ---
 - package: R Module
+  pkgname: "{{ name }}_{{version}}-module"
   category: LANGUAGES
   module:
-    prepend_path:
-      - "{{pkg_defaults.module.prepend_path}}"
     prereq:
       - OpenBLAS/{{versions.OpenBLAS}}
       - java/{{versions.java}}
