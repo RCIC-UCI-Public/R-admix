@@ -4,9 +4,6 @@
 ---
 - package: R Module
   category: LANGUAGES
-  description: |
-    Module for {{name}} version {{version}}.
-    Built with OpenBLAS (v.{{versions.OpenBLAS}}) and java (v.{{versions.java}})
   module:
     prepend_path:
       - "{{pkg_defaults.module.prepend_path}}"
