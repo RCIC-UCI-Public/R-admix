@@ -3,7 +3,7 @@
 !include rcic-module.yaml
 ---
 - package: R Module
-  pkgname: "{{ name }}_{{version}}-module"
+  pkgname: "{{name}}_{{version}}-module"
   category: LANGUAGES
   module:
     prereq:
