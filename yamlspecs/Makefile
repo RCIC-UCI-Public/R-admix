@@ -2,12 +2,11 @@
 # All rights reserved.	
 # This includes the Generic yaml2rpm Makefile - most packaging should
 # be able to use this.
+ALL_TARGETS = all
 include $(YAML2RPM_HOME)/sys/Makefile
 
 SHELL = /bin/bash
 TMPYAMLS = $(shell find . -maxdepth 1 -name '*.yaml' -not -name R.yaml -not -name R-module.yaml -not -name builddeps.yaml -not -name r-pkg.yaml)
-
-.PHONY: buildall
 
 all: modules.bootstrap bootstrap R_versions.yaml prep 
 	make BOOTSTRAP_MODULES_FILE=modules.bootstrap2 bootstrap
