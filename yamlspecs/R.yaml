@@ -4,7 +4,7 @@
   name: R 
   versions: !include R_versions.yaml.base
   version: "{{versions.R}}"
-  vendor_source: https://cran.cnr.berkeley.edu/src/base/R-3/R-{{version}}.{{extension}}
+  vendor_source: https://ftp.ussg.iu.edu/CRAN/src/base/R-3/R-{{version}}.{{extension}}
   description: |
     R {{version}}, built with OpenBLAS (v.{{versions.OpenBLAS}}) and java (v.{{versions.java}}).
     R is 'GNU S', a freely available language and environment

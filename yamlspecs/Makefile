@@ -37,6 +37,7 @@ clean:
 	-/bin/rm modules.bootstrap modules.bootstrap2 modules.build
 	-/bin/rm $(TMPYAMLS)
 	-/bin/rm buildorder
+	-/bin/rm builddeps.yaml 
 	
 veryclean:
 	-/bin/rm builddeps.yaml
