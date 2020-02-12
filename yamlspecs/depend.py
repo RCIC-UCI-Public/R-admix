@@ -5,7 +5,7 @@ import sys
 import subprocess
 import yaml
 
-R_VERSION = "3.6.1"
+R_VERSION = "3.6.2"
 R_MODULE = "R/%s" % R_VERSION
 
 YAMLTEMPLATE="""

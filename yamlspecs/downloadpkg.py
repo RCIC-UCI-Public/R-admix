@@ -5,7 +5,7 @@ import subprocess
 import yaml
 from os import path
 BUILDDEPS = "builddeps.yaml"
-R_MODULE = "R/3.6.1"
+R_MODULE = "R/3.6.2"
 RTEMPLATE = """
 module load %s;
 echo 'download.packages("%s",destdir="../sources", repos="https://cran.r-project.org")' | R --slave
