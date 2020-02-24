@@ -102,6 +102,12 @@ for pkg in resolved:
         yamlversions.write('%s: "%s"\n' % (pkg.pkgname,version))
 
    
+        appendFileName = "%s.yaml.append" % pkg.pkgname
+        try:
+            with open(appendFileName,"r") as addToF:
+                appendData = addToF.readlines()
+        except:
+            appendData = ""
         with open("%s.yaml" % pkg.pkgname,"w") as f:
             contents=re.sub("MODULE", pkg.pkgname, template) % pkg.name 
             f.write(contents)
@@ -114,9 +120,10 @@ for pkg in resolved:
                         f.write("    - R_%s-%s\n" % (R_VERSION,name_mangle(p)))
 
             if pkg.pkgname in addModules.keys():
-		f.write(BUILD_OVERRIDE)
-		for mod in addModules[pkg.pkgname]:
+                f.write(BUILD_OVERRIDE)
+                for mod in addModules[pkg.pkgname]:
                     f.write("      - %s\n" % mod)
+            f.write("".join(appendData))
     except: 
         pass 
 

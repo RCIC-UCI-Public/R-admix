@@ -126,15 +126,24 @@ print.pkgDep <- function(x, ...) {
 
 ## <== END FROM miniCRAN
 
-allPkgs <- available.packages(repos="https://cran.r-project.org")
+allPkgs <- available.packages(repos=c("https://cran.r-project.org","http://bioconductor.org/packages/release/bioc"))
 pkgList <- readLines("modules.desired") 
+# This is as list of packages that we have precompiled/predownloaded and should not have yamls regenerated.
+# These are usually packages that somehow aren't added correctly to CRAN/Bioconductor
+
+excludePackages = c("GenomeInfoDbData")
+#cat(pkgList)
 allDeps <- pkgDep(pkgList, availPkgs=allPkgs, suggests=FALSE) 
 allDeps <- unique(allDeps)
+allDeps <- allDeps[!allDeps %in% excludePackages]
 
 cat(sprintf("## %d desired --> %d required\n", length(pkgList), length(allDeps)))
 cat(sprintf("---\n"))
+#cat(sprintf("===== allDeps\n"))
+#cat(allDeps)
 for (pkg in allDeps) 
 {
+#        cat(sprintf("PKG %s\n",pkg))
 	deps <- pkgDep(pkg,availPkgs=allPkgs,suggests=FALSE)
         pkgInfo = allPkgs[allPkgs[,"Package"] %in% pkg,]
 	cat(sprintf("%s : \n",deps[1]))

@@ -1,8 +1,10 @@
 BiocManager
+BiocGenerics
 car
 caret
 cli
 data.table
+DESeq2
 devtools
 diagram
 dichromat
@@ -11,6 +13,7 @@ dotCall64
 dplyr
 DT
 dygraphs
+edgeR
 fansi
 fields
 foreign
@@ -57,6 +60,7 @@ RSQLite
 rstudioapi
 R6
 scales
+Seurat
 shape
 shiny
 sp

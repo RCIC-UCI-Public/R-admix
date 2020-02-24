@@ -1,0 +1,2 @@
+  provides:
+    - perl(module_tools.pl)

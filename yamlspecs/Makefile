@@ -6,7 +6,13 @@ ALL_TARGETS = all
 include $(YAML2RPM_HOME)/sys/Makefile
 
 SHELL = /bin/bash
-TMPYAMLS = $(shell find . -maxdepth 1 -name '*.yaml' -not -name R.yaml -not -name R-module.yaml -not -name builddeps.yaml -not -name r-pkg.yaml)
+
+## when cleaning temporary yaml files, figure out which ones to not remove
+KEEPYAMLS0 = $(shell cat modules.bootstrap.base)
+KEEPYAMLS0 += r-pkg
+KEEPYAMLS = $(patsubst %,%.yaml,$(KEEPYAMLS0))
+TMPYAMLS0 = $(wildcard *.yaml)
+TMPYAMLS = $(filter-out $(KEEPYAMLS),$(TMPYAMLS0))
 
 all: modules.bootstrap bootstrap R_versions.yaml prep 
 	make BOOTSTRAP_MODULES_FILE=modules.bootstrap2 bootstrap
@@ -41,3 +47,4 @@ clean:
 	
 veryclean:
 	-/bin/rm builddeps.yaml
+
