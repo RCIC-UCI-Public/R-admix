@@ -9,3 +9,4 @@
     prereq:
       - OpenBLAS/{{versions.OpenBLAS}}
       - java/{{versions.java}}
+      - icu/{{versions.icu}}

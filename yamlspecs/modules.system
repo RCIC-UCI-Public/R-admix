@@ -15,3 +15,5 @@ readline-devel
 unixODBC-devel
 xorg-x11-server-devel
 xz-devel
+icu
+icu-devel
