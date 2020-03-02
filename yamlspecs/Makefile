@@ -9,7 +9,7 @@ SHELL = /bin/bash
 
 ## when cleaning temporary yaml files, figure out which ones to not remove
 KEEPYAMLS0 = $(shell cat modules.bootstrap.base)
-KEEPYAMLS0 += r-pkg
+KEEPYAMLS0 += r-pkg R_versions
 KEEPYAMLS = $(patsubst %,%.yaml,$(KEEPYAMLS0))
 TMPYAMLS0 = $(wildcard *.yaml)
 TMPYAMLS = $(filter-out $(KEEPYAMLS),$(TMPYAMLS0))
