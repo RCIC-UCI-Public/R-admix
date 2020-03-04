@@ -7,6 +7,8 @@ include $(YAML2RPM_HOME)/sys/Makefile
 
 SHELL = /bin/bash
 
+.PHONY: force
+
 ## when cleaning temporary yaml files, figure out which ones to not remove
 KEEPYAMLS0 = $(shell cat modules.bootstrap.base)
 KEEPYAMLS0 += r-pkg R_versions
@@ -16,7 +18,8 @@ TMPYAMLS = $(filter-out $(KEEPYAMLS),$(TMPYAMLS0))
 
 all: modules.bootstrap bootstrap R_versions.yaml prep 
 	make BOOTSTRAP_MODULES_FILE=modules.bootstrap2 bootstrap
-
+	make modules.manifest
+        
 prep: modules.build 
 	./downloadpkg.py
 
@@ -38,6 +41,10 @@ modules.bootstrap:
 
 modules.build: modules.bootstrap2 
 	cat modules.bootstrap2 > $@
+
+modules.manifest: force
+	cat modules.desired > $@
+	echo R-modules >> $@
 	
 clean:
 	-/bin/rm modules.bootstrap modules.bootstrap2 modules.build
