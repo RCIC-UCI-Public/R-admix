@@ -6,6 +6,10 @@
   pkgname: "{{name}}_{{version}}-module"
   category: LANGUAGES
   module:
+    lib: lib64
+    setenv:
+      - "{{mod_defaults.setenv}}"
+
     prereq:
       - OpenBLAS/{{versions.OpenBLAS}}
       - java/{{versions.java}}
