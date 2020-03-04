@@ -6,8 +6,6 @@ brms
 car
 caret
 cli
-cluster
-data.table
 DESeq2
 devtools
 diagram
@@ -21,8 +19,6 @@ dygraphs
 edgeR
 fansi
 fields
-foreign
-foreign
 geosphere
 ggmap
 ggplot2
@@ -32,7 +28,6 @@ git2r
 glmnet
 googleVis
 gplots
-gridExtra
 gridExtra
 gtable
 haven
@@ -53,16 +48,13 @@ magrittr
 mapproj
 maps
 maptools
-Matrix
 MCMCpack
-mgcv
 mime
 miniCRAN
 missMDA
 multcomp
 munsell
 networkD3
-nlme
 odbc
 pillar
 plm
@@ -91,7 +83,6 @@ sp
 spam
 stargazer
 stringr
-survival
 threejs
 tibble
 tidyr
