@@ -42,9 +42,11 @@ modules.bootstrap:
 modules.build: modules.bootstrap2 
 	cat modules.bootstrap2 > $@
 
+manifest: modules.manifest
+
 modules.manifest: force
 	cat modules.desired > $@
-	echo R-modules >> $@
+	echo R-module >> $@
 	
 clean:
 	-/bin/rm modules.bootstrap modules.bootstrap2 modules.build
