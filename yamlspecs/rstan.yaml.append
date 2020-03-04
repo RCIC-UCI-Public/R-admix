@@ -1,0 +1,11 @@
+## To build rstan, it needs some Make vars created. The only way can this to work
+## is to change a file in the R RPM and then restore it.
+
+  addfile: mungeMakeconf.sh
+  install:
+     makeinstall: >
+       mkdir -p $(ROOT)/{{libpath}};
+       ( trap './mungeMakeconf.sh restore' 2; ./mungeMakeconf.sh munge;
+       R CMD INSTALL -l $(ROOT)/{{libpath}} {{src_tarball}};
+       ./mungeMakeconf.sh restore;
+       ./mungeMakeconf.sh verify )
