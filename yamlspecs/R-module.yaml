@@ -5,6 +5,7 @@
 - package: R Module
   pkgname: "{{name}}_{{version}}-module"
   category: LANGUAGES
+  release: 2
   module:
     lib: lib64
     setenv:
