@@ -19,6 +19,7 @@ dygraphs
 edgeR
 fansi
 fields
+gam
 geosphere
 ggmap
 ggplot2
@@ -66,6 +67,7 @@ questionr
 R6
 randomForest
 Rcpp
+RcppGSL
 reshape2
 rgl
 rlang
