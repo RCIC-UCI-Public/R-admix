@@ -20,6 +20,7 @@ edgeR
 fansi
 fields
 gam
+gapminder
 geosphere
 ggmap
 ggplot2
@@ -38,6 +39,7 @@ igraph
 kableExtra
 knitr
 labeling
+Lahman
 lavaan
 lazyeval
 leaflet
@@ -56,6 +58,7 @@ missMDA
 multcomp
 munsell
 networkD3
+nycflights13
 odbc
 pillar
 plm
@@ -87,6 +90,7 @@ stargazer
 stringr
 threejs
 tibble
+tidyverse
 tidyr
 vcd
 viridisLite
