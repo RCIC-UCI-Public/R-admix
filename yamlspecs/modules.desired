@@ -22,6 +22,7 @@ fields
 gam
 gapminder
 geosphere
+getopt
 ggmap
 ggplot2
 ggpubr
@@ -60,6 +61,7 @@ munsell
 networkD3
 nycflights13
 odbc
+optparse
 pillar
 plm
 plyr
