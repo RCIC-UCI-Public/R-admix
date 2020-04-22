@@ -24,6 +24,8 @@
       --with-blas
     target: 
   install:
-     makeinstall: make DESTDIR=$(ROOT) install
+     makeinstall: >
+       make DESTDIR=$(ROOT) install;
+       (cd src/nmath/standalone; make; make DESTDIR=$(ROOT) install)
      installextra: $(INSTALL) -m 644  ../README* ../COPYING ../AUTHORS $(ROOT){{root}} 
   rpm: !include rpm.extras.yaml
