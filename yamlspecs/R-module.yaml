@@ -5,11 +5,14 @@
 - package: R Module
   pkgname: "{{name}}_{{version}}-module"
   category: LANGUAGES
-  release: 2
+  release: 3
   module:
     lib: lib64
     setenv:
       - "{{mod_defaults.setenv}}"
+    prepend_path:
+      - "{{mod_defaults.prepend_path}}"
+      - LD_LIBRARY_PATH {{root}}/{{module.lib}}/{{name}}/lib
 
     prereq:
       - OpenBLAS/{{versions.OpenBLAS}}
