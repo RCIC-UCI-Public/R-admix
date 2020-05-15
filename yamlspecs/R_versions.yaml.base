@@ -1,5 +1,7 @@
 R: "3.6.2"
 OpenBLAS: "0.3.6"
-java: "1.8.0"
+java:
+  version: "1.8.0"
+  name: java8
 icu: "65.1"
 GenomeInfoDbData: "1.0.0"

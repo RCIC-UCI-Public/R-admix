@@ -3,18 +3,18 @@
 !include rcic-module.yaml
 ---
 - package: R Module
-  pkgname: "{{name}}_{{version}}-module"
   category: LANGUAGES
-  release: 3
+  release: 2
   module:
     lib: lib64
     setenv:
-      - "{{mod_defaults.setenv}}"
-    prepend_path:
-      - "{{mod_defaults.prepend_path}}"
-      - LD_LIBRARY_PATH {{root}}/{{module.lib}}/{{name}}/lib
-
+      - *Setenv
     prereq:
       - OpenBLAS/{{versions.OpenBLAS}}
-      - java/{{versions.java}}
+      - java/{{versions.java.version}}
       - icu/{{versions.icu}}
+    requires:
+      - *Requires
+      - OpenBLAS_{{versions.OpenBLAS}}-module
+      - "{{versions.java.name}}-module"
+      - icu_{{versions.icu}}-module
