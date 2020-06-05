@@ -17,7 +17,7 @@ KEEPYAMLS = $(patsubst %,%.yaml,$(KEEPYAMLS0))
 TMPYAMLS0 = $(wildcard *.yaml)
 TMPYAMLS = $(filter-out $(KEEPYAMLS),$(TMPYAMLS0))
 
-all: modules.bootstrap bootstrap R_versions.yaml prep 
+all: modules.bootstrap versions.yaml bootstrap R_versions.yaml prep 
 	make BOOTSTRAP_MODULES_FILE=modules.bootstrap2 bootstrap
 	make modules.manifest
         
@@ -30,7 +30,13 @@ builddeps.yaml: modules.desired deps.R
 	cat $@.base >> $@
 
 R_versions.yaml: outversions.yaml 
+	rm -rf versions.yaml
 	cat outversions.yaml $@.base > $@
+	cat outversions.yaml $@.base > versions.yaml
+	
+
+versions.yaml: 
+	cat R_versions.yaml.base > $@
 
 buildorder outversions.yaml: builddeps.yaml 
 	./depend.py > buildorder

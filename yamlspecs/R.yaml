@@ -7,7 +7,7 @@
   vendor_source: https://ftp.ussg.iu.edu/CRAN/src/base/R-3/R-{{version}}.{{extension}}
   release: 2
   description: |
-    R {{version}}, built with OpenBLAS (v.{{versions.OpenBLAS}}) and java (v.{{versions.java}}).
+    R {{version}}, built with OpenBLAS v.{{versions.OpenBLAS}} and java v.{{versions.java.version}}.
     R is 'GNU S', a freely available language and environment
     for statistical computing and graphics which provides a 
     wide variety of statistical and graphical techniques: 
@@ -18,7 +18,7 @@
   build:
     modules:
       - OpenBLAS/{{versions.OpenBLAS}}
-      - java/{{versions.java}}
+      - java/{{versions.java.version}}
     configure_args: >
       --enable-R-shlib
       --with-blas
