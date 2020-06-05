@@ -1,0 +1,12 @@
+
+!include r-pkg.yaml
+---
+- package: R module lazyeval
+  name: lazyeval
+  rpkgname: lazyeval
+  version: "{{versions.lazyeval}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2

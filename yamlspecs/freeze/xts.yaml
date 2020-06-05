@@ -1,0 +1,14 @@
+
+!include r-pkg.yaml
+---
+- package: R module xts
+  name: xts
+  rpkgname: xts
+  version: "{{versions.xts}}"
+  release: "{{versions.xts_release}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-zoo

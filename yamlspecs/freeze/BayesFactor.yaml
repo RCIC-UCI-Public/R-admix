@@ -1,0 +1,28 @@
+
+!include r-pkg.yaml
+---
+- package: R module BayesFactor
+  name: BayesFactor
+  rpkgname: BayesFactor
+  version: "{{versions.BayesFactor}}"
+  release: "{{versions.BayesFactor_release}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-coda
+    - R_3.6.2-pbapply
+    - R_3.6.2-mvtnorm
+    - R_3.6.2-stringr
+    - R_3.6.2-gtools
+    - R_3.6.2-MatrixModels
+    - R_3.6.2-Rcpp
+    - R_3.6.2-hypergeo
+    - R_3.6.2-RcppEigen
+    - R_3.6.2-elliptic
+    - R_3.6.2-contfrac
+    - R_3.6.2-deSolve
+    - R_3.6.2-glue
+    - R_3.6.2-magrittr
+    - R_3.6.2-stringi

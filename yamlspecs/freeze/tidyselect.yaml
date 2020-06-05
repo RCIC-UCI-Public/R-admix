@@ -1,0 +1,19 @@
+
+!include r-pkg.yaml
+---
+- package: R module tidyselect
+  name: tidyselect
+  rpkgname: tidyselect
+  version: "{{versions.tidyselect}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-ellipsis
+    - R_3.6.2-glue
+    - R_3.6.2-purrr
+    - R_3.6.2-rlang
+    - R_3.6.2-vctrs
+    - R_3.6.2-magrittr
+    - R_3.6.2-digest

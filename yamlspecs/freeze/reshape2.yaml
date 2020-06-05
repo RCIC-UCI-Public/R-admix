@@ -1,0 +1,18 @@
+
+!include r-pkg.yaml
+---
+- package: R module reshape2
+  name: reshape2
+  rpkgname: reshape2
+  version: "{{versions.reshape2}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-plyr
+    - R_3.6.2-Rcpp
+    - R_3.6.2-stringr
+    - R_3.6.2-glue
+    - R_3.6.2-magrittr
+    - R_3.6.2-stringi

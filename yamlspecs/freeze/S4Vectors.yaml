@@ -1,0 +1,13 @@
+
+!include r-pkg.yaml
+---
+- package: R module S4Vectors
+  name: S4Vectors
+  rpkgname: S4Vectors
+  version: "{{versions.S4Vectors}}"
+  baseurl: http://bioconductor.org/packages/release/bioc/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-BiocGenerics

@@ -1,0 +1,25 @@
+
+!include r-pkg.yaml
+---
+- package: R module miniCRAN
+  name: miniCRAN
+  rpkgname: miniCRAN
+  version: "{{versions.miniCRAN}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-httr
+    - R_3.6.2-XML
+    - R_3.6.2-igraph
+    - R_3.6.2-assertthat
+    - R_3.6.2-curl
+    - R_3.6.2-jsonlite
+    - R_3.6.2-mime
+    - R_3.6.2-openssl
+    - R_3.6.2-R6
+    - R_3.6.2-magrittr
+    - R_3.6.2-pkgconfig
+    - R_3.6.2-askpass
+    - R_3.6.2-sys

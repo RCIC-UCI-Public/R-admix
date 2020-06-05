@@ -1,0 +1,27 @@
+
+!include r-pkg.yaml
+---
+- package: R module forcats
+  name: forcats
+  rpkgname: forcats
+  version: "{{versions.forcats}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-ellipsis
+    - R_3.6.2-magrittr
+    - R_3.6.2-rlang
+    - R_3.6.2-tibble
+    - R_3.6.2-cli
+    - R_3.6.2-crayon
+    - R_3.6.2-fansi
+    - R_3.6.2-lifecycle
+    - R_3.6.2-pillar
+    - R_3.6.2-pkgconfig
+    - R_3.6.2-vctrs
+    - R_3.6.2-assertthat
+    - R_3.6.2-glue
+    - R_3.6.2-utf8
+    - R_3.6.2-digest

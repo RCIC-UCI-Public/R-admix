@@ -1,0 +1,13 @@
+
+!include r-pkg.yaml
+---
+- package: R module gridExtra
+  name: gridExtra
+  rpkgname: gridExtra
+  version: "{{versions.gridExtra}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-gtable

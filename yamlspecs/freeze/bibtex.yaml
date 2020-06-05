@@ -1,0 +1,16 @@
+
+!include r-pkg.yaml
+---
+- package: R module bibtex
+  name: bibtex
+  rpkgname: bibtex
+  version: "{{versions.bibtex}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-stringr
+    - R_3.6.2-glue
+    - R_3.6.2-magrittr
+    - R_3.6.2-stringi

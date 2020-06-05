@@ -1,0 +1,15 @@
+
+!include r-pkg.yaml
+---
+- package: R module futile_logger
+  name: futile_logger
+  rpkgname: futile.logger
+  version: "{{versions.futile_logger}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-lambda_r
+    - R_3.6.2-futile_options
+    - R_3.6.2-formatR

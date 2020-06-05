@@ -1,0 +1,14 @@
+
+!include r-pkg.yaml
+---
+- package: R module RgoogleMaps
+  name: RgoogleMaps
+  rpkgname: RgoogleMaps
+  version: "{{versions.RgoogleMaps}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-png
+    - R_3.6.2-sp

@@ -1,0 +1,14 @@
+
+!include r-pkg.yaml
+---
+- package: R module bit64
+  name: bit64
+  rpkgname: bit64
+  version: "{{versions.bit64}}"
+  release: "{{versions.bit64_release}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-bit

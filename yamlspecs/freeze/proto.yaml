@@ -1,0 +1,12 @@
+
+!include r-pkg.yaml
+---
+- package: R module proto
+  name: proto
+  rpkgname: proto
+  version: "{{versions.proto}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2

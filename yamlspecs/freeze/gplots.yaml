@@ -1,0 +1,16 @@
+
+!include r-pkg.yaml
+---
+- package: R module gplots
+  name: gplots
+  rpkgname: gplots
+  version: "{{versions.gplots}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-gtools
+    - R_3.6.2-gdata
+    - R_3.6.2-caTools
+    - R_3.6.2-bitops

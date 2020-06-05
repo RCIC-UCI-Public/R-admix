@@ -1,0 +1,32 @@
+
+!include r-pkg.yaml
+---
+- package: R module htmlTable
+  name: htmlTable
+  rpkgname: htmlTable
+  version: "{{versions.htmlTable}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-stringr
+    - R_3.6.2-knitr
+    - R_3.6.2-magrittr
+    - R_3.6.2-checkmate
+    - R_3.6.2-htmlwidgets
+    - R_3.6.2-htmltools
+    - R_3.6.2-rstudioapi
+    - R_3.6.2-backports
+    - R_3.6.2-digest
+    - R_3.6.2-Rcpp
+    - R_3.6.2-rlang
+    - R_3.6.2-jsonlite
+    - R_3.6.2-yaml
+    - R_3.6.2-evaluate
+    - R_3.6.2-highr
+    - R_3.6.2-markdown
+    - R_3.6.2-xfun
+    - R_3.6.2-glue
+    - R_3.6.2-stringi
+    - R_3.6.2-mime

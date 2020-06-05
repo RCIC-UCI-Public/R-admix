@@ -1,0 +1,19 @@
+
+!include r-pkg.yaml
+---
+- package: R module Rdpack
+  name: Rdpack
+  rpkgname: Rdpack
+  version: "{{versions.Rdpack}}"
+  release: "{{versions.Rdpack_release}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-bibtex
+    - R_3.6.2-gbRd
+    - R_3.6.2-stringr
+    - R_3.6.2-glue
+    - R_3.6.2-magrittr
+    - R_3.6.2-stringi

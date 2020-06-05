@@ -1,0 +1,15 @@
+
+!include r-pkg.yaml
+---
+- package: R module xopen
+  name: xopen
+  rpkgname: xopen
+  version: "{{versions.xopen}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-processx
+    - R_3.6.2-ps
+    - R_3.6.2-R6

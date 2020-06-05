@@ -1,0 +1,12 @@
+
+!include r-pkg.yaml
+---
+- package: R module rematch
+  name: rematch
+  rpkgname: rematch
+  version: "{{versions.rematch}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2

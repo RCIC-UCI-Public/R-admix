@@ -1,0 +1,18 @@
+
+!include r-pkg.yaml
+---
+- package: R module BiocParallel
+  name: BiocParallel
+  rpkgname: BiocParallel
+  version: "{{versions.BiocParallel}}"
+  baseurl: http://bioconductor.org/packages/release/bioc/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-futile_logger
+    - R_3.6.2-snow
+    - R_3.6.2-BH
+    - R_3.6.2-lambda_r
+    - R_3.6.2-futile_options
+    - R_3.6.2-formatR

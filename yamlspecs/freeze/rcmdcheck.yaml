@@ -1,0 +1,30 @@
+
+!include r-pkg.yaml
+---
+- package: R module rcmdcheck
+  name: rcmdcheck
+  rpkgname: rcmdcheck
+  version: "{{versions.rcmdcheck}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-callr
+    - R_3.6.2-cli
+    - R_3.6.2-crayon
+    - R_3.6.2-desc
+    - R_3.6.2-digest
+    - R_3.6.2-pkgbuild
+    - R_3.6.2-prettyunits
+    - R_3.6.2-R6
+    - R_3.6.2-rprojroot
+    - R_3.6.2-sessioninfo
+    - R_3.6.2-withr
+    - R_3.6.2-xopen
+    - R_3.6.2-processx
+    - R_3.6.2-assertthat
+    - R_3.6.2-glue
+    - R_3.6.2-fansi
+    - R_3.6.2-backports
+    - R_3.6.2-ps

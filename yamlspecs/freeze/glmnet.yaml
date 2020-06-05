@@ -1,0 +1,15 @@
+
+!include r-pkg.yaml
+---
+- package: R module glmnet
+  name: glmnet
+  rpkgname: glmnet
+  version: "{{versions.glmnet}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-foreach
+    - R_3.6.2-shape
+    - R_3.6.2-iterators

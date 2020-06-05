@@ -1,0 +1,26 @@
+
+!include r-pkg.yaml
+---
+- package: R module gh
+  name: gh
+  rpkgname: gh
+  version: "{{versions.gh}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-cli
+    - R_3.6.2-ini
+    - R_3.6.2-jsonlite
+    - R_3.6.2-httr
+    - R_3.6.2-assertthat
+    - R_3.6.2-crayon
+    - R_3.6.2-glue
+    - R_3.6.2-fansi
+    - R_3.6.2-curl
+    - R_3.6.2-mime
+    - R_3.6.2-openssl
+    - R_3.6.2-R6
+    - R_3.6.2-askpass
+    - R_3.6.2-sys

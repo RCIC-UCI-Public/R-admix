@@ -1,0 +1,18 @@
+
+!include r-pkg.yaml
+---
+- package: R module ipred
+  name: ipred
+  rpkgname: ipred
+  version: "{{versions.ipred}}"
+  release: "{{versions.ipred_release}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-prodlim
+    - R_3.6.2-Rcpp
+    - R_3.6.2-lava
+    - R_3.6.2-numDeriv
+    - R_3.6.2-SQUAREM

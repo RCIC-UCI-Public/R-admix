@@ -1,0 +1,12 @@
+
+!include r-pkg.yaml
+---
+- package: R module xfun
+  name: xfun
+  rpkgname: xfun
+  version: "{{versions.xfun}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2

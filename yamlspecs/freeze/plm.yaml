@@ -1,0 +1,28 @@
+
+!include r-pkg.yaml
+---
+- package: R module plm
+  name: plm
+  rpkgname: plm
+  version: "{{versions.plm}}"
+  release: "{{versions.plm_release}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-bdsmatrix
+    - R_3.6.2-zoo
+    - R_3.6.2-sandwich
+    - R_3.6.2-lmtest
+    - R_3.6.2-maxLik
+    - R_3.6.2-Rdpack
+    - R_3.6.2-Formula
+    - R_3.6.2-miscTools
+    - R_3.6.2-bibtex
+    - R_3.6.2-gbRd
+    - R_3.6.2-stringr
+    - R_3.6.2-digest
+    - R_3.6.2-glue
+    - R_3.6.2-magrittr
+    - R_3.6.2-stringi

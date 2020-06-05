@@ -1,0 +1,20 @@
+
+!include r-pkg.yaml
+---
+- package: R module pbkrtest
+  name: pbkrtest
+  rpkgname: pbkrtest
+  version: "{{versions.pbkrtest}}"
+  release: "{{versions.pbkrtest_release}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-lme4
+    - R_3.6.2-magrittr
+    - R_3.6.2-minqa
+    - R_3.6.2-nloptr
+    - R_3.6.2-statmod
+    - R_3.6.2-Rcpp
+    - R_3.6.2-RcppEigen

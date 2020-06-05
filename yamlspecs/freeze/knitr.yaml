@@ -1,0 +1,22 @@
+
+!include r-pkg.yaml
+---
+- package: R module knitr
+  name: knitr
+  rpkgname: knitr
+  version: "{{versions.knitr}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-evaluate
+    - R_3.6.2-highr
+    - R_3.6.2-markdown
+    - R_3.6.2-stringr
+    - R_3.6.2-yaml
+    - R_3.6.2-xfun
+    - R_3.6.2-mime
+    - R_3.6.2-glue
+    - R_3.6.2-magrittr
+    - R_3.6.2-stringi

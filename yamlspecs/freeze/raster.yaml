@@ -1,0 +1,15 @@
+
+!include r-pkg.yaml
+---
+- package: R module raster
+  name: raster
+  rpkgname: raster
+  version: "{{versions.raster}}"
+  release: "{{versions.raster_release}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-sp
+    - R_3.6.2-Rcpp

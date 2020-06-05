@@ -1,0 +1,19 @@
+
+!include r-pkg.yaml
+---
+- package: R module rstantools
+  name: rstantools
+  rpkgname: rstantools
+  version: "{{versions.rstantools}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-Rcpp
+    - R_3.6.2-desc
+    - R_3.6.2-assertthat
+    - R_3.6.2-R6
+    - R_3.6.2-crayon
+    - R_3.6.2-rprojroot
+    - R_3.6.2-backports

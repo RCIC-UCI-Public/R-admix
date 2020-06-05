@@ -1,0 +1,14 @@
+
+!include r-pkg.yaml
+---
+- package: R module openssl
+  name: openssl
+  rpkgname: openssl
+  version: "{{versions.openssl}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-askpass
+    - R_3.6.2-sys

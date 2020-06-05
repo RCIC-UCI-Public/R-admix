@@ -1,0 +1,53 @@
+
+!include r-pkg.yaml
+---
+- package: R module ggrepel
+  name: ggrepel
+  rpkgname: ggrepel
+  version: "{{versions.ggrepel}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-ggplot2
+    - R_3.6.2-Rcpp
+    - R_3.6.2-scales
+    - R_3.6.2-digest
+    - R_3.6.2-glue
+    - R_3.6.2-gtable
+    - R_3.6.2-isoband
+    - R_3.6.2-rlang
+    - R_3.6.2-tibble
+    - R_3.6.2-withr
+    - R_3.6.2-farver
+    - R_3.6.2-labeling
+    - R_3.6.2-lifecycle
+    - R_3.6.2-munsell
+    - R_3.6.2-R6
+    - R_3.6.2-RColorBrewer
+    - R_3.6.2-viridisLite
+    - R_3.6.2-testthat
+    - R_3.6.2-colorspace
+    - R_3.6.2-cli
+    - R_3.6.2-crayon
+    - R_3.6.2-ellipsis
+    - R_3.6.2-fansi
+    - R_3.6.2-magrittr
+    - R_3.6.2-pillar
+    - R_3.6.2-pkgconfig
+    - R_3.6.2-vctrs
+    - R_3.6.2-assertthat
+    - R_3.6.2-utf8
+    - R_3.6.2-evaluate
+    - R_3.6.2-pkgload
+    - R_3.6.2-praise
+    - R_3.6.2-desc
+    - R_3.6.2-pkgbuild
+    - R_3.6.2-rprojroot
+    - R_3.6.2-rstudioapi
+    - R_3.6.2-callr
+    - R_3.6.2-prettyunits
+    - R_3.6.2-backports
+    - R_3.6.2-processx
+    - R_3.6.2-ps

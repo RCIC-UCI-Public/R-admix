@@ -1,0 +1,17 @@
+
+!include r-pkg.yaml
+---
+- package: R module ltm
+  name: ltm
+  rpkgname: ltm
+  version: "{{versions.ltm}}"
+  release: "{{versions.ltm_release}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-msm
+    - R_3.6.2-polycor
+    - R_3.6.2-mvtnorm
+    - R_3.6.2-expm

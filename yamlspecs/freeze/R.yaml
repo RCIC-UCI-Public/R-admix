@@ -1,0 +1,31 @@
+!include rcic-package.yaml
+---
+- package: R statistics 
+  name: R 
+  versions: !include R_versions.yaml.base
+  version: "{{versions.R}}"
+  vendor_source: https://ftp.ussg.iu.edu/CRAN/src/base/R-3/R-{{version}}.{{extension}}
+  release: 2
+  description: |
+    R {{version}}, built with OpenBLAS v.{{versions.OpenBLAS}} and java v.{{versions.java.version}}.
+    R is 'GNU S', a freely available language and environment
+    for statistical computing and graphics which provides a 
+    wide variety of statistical and graphical techniques: 
+    linear and nonlinear modelling, statistical tests, time 
+    series analysis, classification, clustering, etc. Please
+    consult the R project homepage for further information
+  builddir: build
+  build:
+    modules:
+      - OpenBLAS/{{versions.OpenBLAS}}
+      - java/{{versions.java.version}}
+    configure_args: >
+      --enable-R-shlib
+      --with-blas
+    target: 
+  install:
+     makeinstall: >
+       make DESTDIR=$(ROOT) install;
+       (cd src/nmath/standalone; make; make DESTDIR=$(ROOT) install)
+     installextra: $(INSTALL) -m 644  ../README* ../COPYING ../AUTHORS $(ROOT){{root}} 
+  rpm: !include rpm.extras.yaml

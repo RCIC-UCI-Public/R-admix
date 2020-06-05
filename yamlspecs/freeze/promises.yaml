@@ -1,0 +1,18 @@
+
+!include r-pkg.yaml
+---
+- package: R module promises
+  name: promises
+  rpkgname: promises
+  version: "{{versions.promises}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-R6
+    - R_3.6.2-Rcpp
+    - R_3.6.2-later
+    - R_3.6.2-rlang
+    - R_3.6.2-magrittr
+    - R_3.6.2-BH

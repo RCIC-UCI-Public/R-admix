@@ -1,0 +1,16 @@
+
+!include r-pkg.yaml
+---
+- package: R module quantmod
+  name: quantmod
+  rpkgname: quantmod
+  version: "{{versions.quantmod}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-xts
+    - R_3.6.2-zoo
+    - R_3.6.2-TTR
+    - R_3.6.2-curl

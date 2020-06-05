@@ -1,0 +1,26 @@
+
+!include r-pkg.yaml
+---
+- package: R module rvest
+  name: rvest
+  rpkgname: rvest
+  version: "{{versions.rvest}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-xml2
+    - R_3.6.2-httr
+    - R_3.6.2-magrittr
+    - R_3.6.2-selectr
+    - R_3.6.2-curl
+    - R_3.6.2-jsonlite
+    - R_3.6.2-mime
+    - R_3.6.2-openssl
+    - R_3.6.2-R6
+    - R_3.6.2-stringr
+    - R_3.6.2-askpass
+    - R_3.6.2-glue
+    - R_3.6.2-stringi
+    - R_3.6.2-sys

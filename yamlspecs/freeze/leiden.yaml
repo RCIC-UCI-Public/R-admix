@@ -1,0 +1,19 @@
+
+!include r-pkg.yaml
+---
+- package: R module leiden
+  name: leiden
+  rpkgname: leiden
+  version: "{{versions.leiden}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_3.6.2
+    - R_3.6.2-reticulate
+    - R_3.6.2-igraph
+    - R_3.6.2-magrittr
+    - R_3.6.2-pkgconfig
+    - R_3.6.2-jsonlite
+    - R_3.6.2-rappdirs
+    - R_3.6.2-Rcpp
