@@ -6,8 +6,7 @@
   rpkgname: mvtnorm
   version: "{{versions.mvtnorm}}"
   release: "{{versions.mvtnorm_release}}"
-  baseurl: https://cran.r-project.org/src/contrib
   src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
-  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: https://cran.r-project.org/src/contrib/{{rpkgname}}_{{version}}-{{release}}.tar.gz 
   requires:
     - R_3.6.2
