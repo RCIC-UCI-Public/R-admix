@@ -10,8 +10,8 @@ SHELL = /bin/bash
 .PHONY: force
 
 ## when cleaning temporary yaml files, figure out which ones to not remove
-KEEPYAMLS0 = $(shell cat modules.bootstrap.base)
-KEEPYAMLS0 = $(shell cat keepyamls)
+KEEPYAMLS0 = $(shell cat modules.bootstrap.base | grep -v '^#')
+KEEPYAMLS0 = $(shell cat keepyamls | grep -v '^#')
 KEEPYAMLS0 += r-pkg R_versions
 KEEPYAMLS = $(patsubst %,%.yaml,$(KEEPYAMLS0))
 TMPYAMLS0 = $(wildcard *.yaml)
