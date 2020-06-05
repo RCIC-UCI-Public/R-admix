@@ -3,3 +3,9 @@ OpenBLAS: "0.3.6"
 java: "1.8.0"
 icu: "65.1"
 GenomeInfoDbData: "1.0.0"
+tmvnsim: 
+  version: "1.0"
+  release: "2"
+mnormt: 
+  version: "1.5"
+  release: "7"

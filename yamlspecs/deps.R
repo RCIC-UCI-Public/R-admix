@@ -131,7 +131,7 @@ pkgList <- readLines("modules.desired")
 # This is as list of packages that we have precompiled/predownloaded and should not have yamls regenerated.
 # These are usually packages that somehow aren't added correctly to CRAN/Bioconductor
 
-excludePackages = c("GenomeInfoDbData")
+excludePackages = c("GenomeInfoDbData","tmvnsim", "mnormt", "foreign")
 #cat(pkgList)
 allDeps <- pkgDep(pkgList, availPkgs=allPkgs, suggests=FALSE) 
 allDeps <- unique(allDeps)
@@ -143,7 +143,7 @@ cat(sprintf("---\n"))
 #cat(allDeps)
 for (pkg in allDeps) 
 {
-#        cat(sprintf("PKG %s\n",pkg))
+        cat(sprintf("PKG %s\n",pkg),file=stderr())
 	deps <- pkgDep(pkg,availPkgs=allPkgs,suggests=FALSE)
         pkgInfo = allPkgs[allPkgs[,"Package"] %in% pkg,]
 	cat(sprintf("%s : \n",deps[1]))
