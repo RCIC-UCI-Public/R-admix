@@ -9,3 +9,4 @@ tmvnsim:
 mnormt: 
   version: "1.5"
   release: "7"
+StanHeaders: "2.19.2"

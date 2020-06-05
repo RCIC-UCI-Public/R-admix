@@ -15,8 +15,9 @@ YAMLTEMPLATE="""
   name: MODULE
   rpkgname: %s
   version: "{{versions.MODULE}}"
+  baseurl: %s
   src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
-  vendor_source: https://cran.r-project.org/src/contrib/{{rpkgname}}_{{version}}.tar.gz 
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
 """
 YAMLTEMPLATE_RELEASE="""
 !include r-pkg.yaml
@@ -26,8 +27,9 @@ YAMLTEMPLATE_RELEASE="""
   rpkgname: %s
   version: "{{versions.MODULE}}"
   release: "{{versions.MODULE_release}}"
+  baseurl: %s
   src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
-  vendor_source: https://cran.r-project.org/src/contrib/{{rpkgname}}_{{version}}-{{release}}.tar.gz 
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
 """
 BUILD_OVERRIDE="""
   build:
@@ -44,9 +46,13 @@ def name_mangle(name):
     return name.replace(".","_")
 
 class Node(object):
-    def __init__(self,name):
+    def __init__(self,name,r_modules=None):
         self.name = name
         self.pkgname = name_mangle(self.name)
+        try:
+            self.baseurl = r_modules[name]['baseurl']
+        except:
+            pass
         self.edges = []
     def addEdge(self, node):
         self.edges.append(node)
@@ -67,13 +73,16 @@ syspkgs = [ "KernSmooth", "MASS", "Matrix", "base", "boot", "class", "cluster", 
 # Create Graph nodes for every module
 f=open("builddeps.yaml")
 r_modules = yaml.load(f)
-nodes = [ Node(name) for name in r_modules.keys()]
+nodes = [ Node(name,r_modules) for name in r_modules.keys()]
 
 # make a  master Node to and add all edges to it to make sure that the dependency graph is connected
 master = Node('root node')
 for node in nodes:
     if node.name not in syspkgs:
         master.addEdge(node)
+    else:
+        sys.stderr.write("INFO: Not writing yaml file for system package %s\n" % node.name)
+        
     deps = r_modules[node.name]['requires']
     try:
         edges = filter(lambda x: x.name in deps, nodes)
@@ -109,7 +118,7 @@ for pkg in resolved:
         except:
             appendData = ""
         with open("%s.yaml" % pkg.pkgname,"w") as f:
-            contents=re.sub("MODULE", pkg.pkgname, template) % pkg.name 
+            contents=re.sub("MODULE", pkg.pkgname, template) % (pkg.name,pkg.baseurl)
             f.write(contents)
             deps = r_modules[pkg.name]['requires']
             f.write("  requires:\n") 

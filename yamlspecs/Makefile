@@ -11,6 +11,7 @@ SHELL = /bin/bash
 
 ## when cleaning temporary yaml files, figure out which ones to not remove
 KEEPYAMLS0 = $(shell cat modules.bootstrap.base)
+KEEPYAMLS0 = $(shell cat keepyamls)
 KEEPYAMLS0 += r-pkg R_versions
 KEEPYAMLS = $(patsubst %,%.yaml,$(KEEPYAMLS0))
 TMPYAMLS0 = $(wildcard *.yaml)
@@ -26,6 +27,7 @@ prep: modules.build
 builddeps.yaml: modules.desired deps.R
 	( module load R; \
 	  cat deps.R | R --slave > $@  )
+	cat $@.base >> $@
 
 R_versions.yaml: outversions.yaml 
 	cat outversions.yaml $@.base > $@
@@ -45,8 +47,7 @@ modules.build: modules.bootstrap2
 manifest: modules.manifest
 
 modules.manifest: force
-	cat modules.bootstrap.base > $@
-	cat modules.desired >> $@
+	cat modules.bootstrap2 >$@
 	
 clean:
 	-/bin/rm modules.bootstrap modules.bootstrap2 modules.build

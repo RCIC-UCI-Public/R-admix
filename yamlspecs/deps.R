@@ -128,10 +128,23 @@ print.pkgDep <- function(x, ...) {
 
 allPkgs <- available.packages(repos=c("https://cran.r-project.org","http://bioconductor.org/packages/release/bioc"))
 pkgList <- readLines("modules.desired") 
-# This is as list of packages that we have precompiled/predownloaded and should not have yamls regenerated.
+
+############## SPECIAL PACKAGE HANDLING ##############
+# This is as list of packages that we have precompiled/predownloaded and 
+# should not have yamls regenerated. 
+#     * Their versions should be in R_versions.yaml.base
+#     * They need to be in modules.bootstrap
 # These are usually packages that somehow aren't added correctly to CRAN/Bioconductor
 
 excludePackages = c("GenomeInfoDbData","tmvnsim", "mnormt", "foreign")
+
+# These are packages where we only archive the yaml and therefore don't overwrite the
+# yaml file. Otherwise, normally processed. These are usually cases where we need an
+# older version of a package to properly compile. 
+#    * They need to have entries in builddeps.yaml.base
+#    * They need to have versions in R_versions.yaml.base
+archivePackages = c("StanHeaders")
+
 #cat(pkgList)
 allDeps <- pkgDep(pkgList, availPkgs=allPkgs, suggests=FALSE) 
 allDeps <- unique(allDeps)
@@ -144,9 +157,17 @@ cat(sprintf("---\n"))
 for (pkg in allDeps) 
 {
         cat(sprintf("PKG %s\n",pkg),file=stderr())
+        if (pkg %in%  archivePackages)
+        {
+            cat(sprintf(" -- PKG %s using archive\n",pkg),file=stderr())
+            next
+        }
 	deps <- pkgDep(pkg,availPkgs=allPkgs,suggests=FALSE)
         pkgInfo = allPkgs[allPkgs[,"Package"] %in% pkg,]
+        # cat(sprintf("INFO %s\n",pkgInfo["Repository"]),file=stderr())
+
 	cat(sprintf("%s : \n",deps[1]))
+	cat(sprintf("  baseurl : \"%s\"\n",pkgInfo["Repository"]))
 	cat(sprintf("  version : \"%s\"\n",pkgInfo["Version"]))
 	cat(sprintf("  requires : \n"))
         if ( length(deps) == 1 )

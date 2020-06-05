@@ -35,6 +35,7 @@ verify() {
 
 if [ "$1" == "munge" ]; then
   save
+  echo "MUNGING $MAKECONF"
   echo -e $RSTANCOMPILERDEFS >> $MAKECONF
 fi
 

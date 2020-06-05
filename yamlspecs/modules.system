@@ -18,3 +18,5 @@ xz-devel
 icu
 icu-devel
 gsl-devel
+tcl-devel
+tk-devel
