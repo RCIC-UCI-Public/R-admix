@@ -71,9 +71,16 @@ syspkgs = [ "KernSmooth", "MASS", "Matrix", "base", "boot", "class", "cluster", 
 "tcltk", "tools", "translations", "utils" ] 
 
 # Create Graph nodes for every module
-f=open("builddeps.yaml")
-r_modules = yaml.load(f)
+with open("builddeps.yaml") as f:
+    r_modules = yaml.load(f)
+
 nodes = [ Node(name,r_modules) for name in r_modules.keys()]
+
+# Track the yaml files we are not supposed to overwrite
+with open("keepyamls","r") as g:
+    klines = g.readlines()
+    keep = [ x.strip() for x in klines ]
+
 
 # make a  master Node to and add all edges to it to make sure that the dependency graph is connected
 master = Node('root node')
@@ -117,6 +124,9 @@ for pkg in resolved:
                 appendData = addToF.readlines()
         except:
             appendData = ""
+        if pkg.pkgname in keep:
+            sys.stderr.write("INFO: Skipping pre-defined package yaml %s\n" % pkg.pkgname)
+            continue
         with open("%s.yaml" % pkg.pkgname,"w") as f:
             contents=re.sub("MODULE", pkg.pkgname, template) % (pkg.name,pkg.baseurl)
             f.write(contents)
