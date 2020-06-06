@@ -55,7 +55,7 @@ manifest: modules.manifest
 modules.manifest: force
 	cat modules.bootstrap2 >$@
 	
-freeze:
+freeze: force
 	echo "freezing all yaml files, bootstrap files, buildorder into freeze subdir"
 	if [ ! -d freeze ]; then mkdir freeze; fi
 	cp -p *yaml *bootstrap* modules.build buildorder freeze

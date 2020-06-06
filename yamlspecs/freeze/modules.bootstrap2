@@ -3,19 +3,6 @@ R-module
 GenomeInfoDbData
 tmvnsim
 mnormt
-## Not writing yaml file for system package Matrix
-## Not writing yaml file for system package rpart
-## Not writing yaml file for system package codetools
-## Not writing yaml file for system package cluster
-## Not writing yaml file for system package survival
-## Not writing yaml file for system package nlme
-## Not writing yaml file for system package nnet
-## Not writing yaml file for system package KernSmooth
-## Not writing yaml file for system package lattice
-## Not writing yaml file for system package MASS
-## Not writing yaml file for system package boot
-## Not writing yaml file for system package class
-## Not writing yaml file for system package mgcv
 git2r
 Rcpp
 RcppAnnoy
