@@ -1,4 +1,5 @@
 ## These are yamls that we keep AND depend.py will not overwrite
 StanHeaders
-mvtnorm 
+mnormt
 tmvnsim 
+GenomeInfoDbData
