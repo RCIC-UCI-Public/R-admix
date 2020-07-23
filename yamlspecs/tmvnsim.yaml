@@ -8,5 +8,3 @@
   release: "{{versions.tmvnsim.release}}"
   src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
   vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}-{{release}}.tar.gz 
-  requires:
-    - R_3.6.2
