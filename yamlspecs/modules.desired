@@ -6,6 +6,7 @@ brms
 car
 caret
 cli
+cmdstanr
 DESeq2
 devtools
 diagram
