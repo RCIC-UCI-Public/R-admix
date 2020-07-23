@@ -6,10 +6,10 @@ import yaml
 from os import path
 BUILDDEPS = "builddeps.yaml"
 BOOTSTRAP = "modules.bootstr"
-R_MODULE = "R/3.6.2"
+#R_MODULE = "R/3.6.2"
 RTEMPLATE = """
 module load %s;
-echo 'download.packages("%s",destdir="../sources", repos=c("https://cran.r-project.org","http://bioconductor.org/packages/release/bioc"))' | R --slave
+echo 'download.packages("%s",destdir="../sources", repos=c("https://cran.r-project.org","http://bioconductor.org/packages/release/bioc","https://mc-stan.org/r-packages/"))' | R --slave
 """
 
 
