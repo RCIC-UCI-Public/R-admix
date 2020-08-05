@@ -353,3 +353,8 @@ randomForest
 nycflights13
 RcppGSL
 leaflet
+repr
+IRdisplay
+uuid
+pbdZMQ
+IRkernel

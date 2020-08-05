@@ -3,6 +3,7 @@
 - package: R module template 
   name: r-module-template 
   versions: !include R_versions.yaml
+  Rversion: "{{versions.R}}"
   rpkgname: "{{name}}"
   baserpm: "R_{{versions.R}}-{{name}}"
   src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"

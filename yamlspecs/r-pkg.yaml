@@ -1,20 +1,22 @@
 !include rcic-package.yaml
+!include rpm.yaml
 ---
 - package: R module template 
   name: r-module-template 
   versions: !include R_versions.yaml
   rpkgname: "{{name}}"
-  baserpm: "R_{{versions.R}}-{{name}}"
+  Rversion: "{{versions.R.version}}"
+  baserpm: "R_{{Rversion}}-{{name}}"
   src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
   no_src_dir: true
   vendor_source: https://cran.r-project.org/src/contrib/{{rpkgname}}_{{version}}-{{release}}.tar.gz 
   description: >
-    {{rpkgname}} version {{version}} for R version {{versions.R}}. 
-  libpath: "{{pkg_defaults.app_path}}/R/{{versions.R}}/lib64/R/library"
+    {{rpkgname}} version {{version}} for R version {{Rversion}}. 
+  libpath: "{{pkg_defaults.app_path}}/R/{{Rversion}}/lib64/R/library"
   root: "{{libpath}}/{{rpkgname}}"
   build:
     modules:
-      - R/{{versions.R}}
+      - R/{{Rversion}}
     configure: echo no configure required
     pkgmake: echo installed with R CMD INSTALL
     target: 
@@ -24,5 +26,4 @@
        R CMD INSTALL -l $(ROOT)/{{libpath}} {{src_tarball}}
   files:
     -  "{{root}}"
-  rpm: !include rpm.extras.yaml
-  requires: R_{{versions.R}}
+  requires: R_{{Rversion}}

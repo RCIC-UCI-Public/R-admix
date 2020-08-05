@@ -6,7 +6,6 @@ brms
 car
 caret
 cli
-data.table
 DESeq2
 devtools
 diagram
@@ -38,6 +37,7 @@ haven
 Hmisc
 htmlwidgets
 igraph
+IRkernel
 kableExtra
 knitr
 labeling

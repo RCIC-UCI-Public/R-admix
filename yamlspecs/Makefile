@@ -27,7 +27,6 @@ prep: modules.build
 builddeps.yaml: modules.desired deps.R
 	( module load R; \
 	  cat deps.R | R --slave > $@  )
-	cat $@.base >> $@
 
 R_versions.yaml: outversions.yaml 
 	rm -rf versions.yaml

@@ -5,7 +5,7 @@ import sys
 import subprocess
 import yaml
 
-R_VERSION = "3.6.2"
+R_VERSION = "{{Rversion}}"
 R_MODULE = "R/%s" % R_VERSION
 
 YAMLTEMPLATE="""
@@ -37,7 +37,7 @@ BUILD_OVERRIDE="""
     pkgmake: echo installed with R CMD INSTALL
     target:
     modules:
-      - R/{{versions.R}}
+      - R/{{Rversion}}
 """
 
 addModules = { 'Rmpi': ['mpi/openmpi-x86_64'] }

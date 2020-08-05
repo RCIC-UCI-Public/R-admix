@@ -9,5 +9,5 @@
   src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
   vendor_source: https://cran.r-project.org/src/contrib/Archive/{{name}}/{{name}}_{{version}}-{{release}}.tar.gz
   requires:
-    - R_{{versions.R}}
-    - R_{{versions.R}}-tmvnsim
+    - R_{{Rversion}}
+    - R_{{Rversion}}-tmvnsim

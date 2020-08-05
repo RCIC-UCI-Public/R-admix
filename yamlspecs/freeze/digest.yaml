@@ -9,4 +9,4 @@
   src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
   vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
   requires:
-    - R_3.6.2
+    - R_{{Rversion}}

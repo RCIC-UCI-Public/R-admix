@@ -9,8 +9,8 @@
   src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
   vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
   requires:
-    - R_3.6.2
-    - R_3.6.2-assertthat
-    - R_3.6.2-crayon
-    - R_3.6.2-glue
-    - R_3.6.2-fansi
+    - R_{{Rversion}}
+    - R_{{Rversion}}-assertthat
+    - R_{{Rversion}}-crayon
+    - R_{{Rversion}}-glue
+    - R_{{Rversion}}-fansi
