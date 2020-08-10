@@ -1,5 +1,3 @@
-R: "4.0.2"
-Rmajor: "4"
 OpenBLAS: "0.3.6"
 java:
   version: "1.8.0"
@@ -13,7 +11,11 @@ mnormt:
   version: "1.5"
   release: "7"
 StanHeaders: "2.19.2"
+
+## Downgraded versions. Newer versions won't compile
+## Check these on major relase updates
 XML_release: "0.3"
 XML: "3.99"
 tidyr: "1.1.0"
+odbc: "1.2.2"
 
