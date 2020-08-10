@@ -143,7 +143,7 @@ excludePackages = c("GenomeInfoDbData","tmvnsim", "mnormt", "foreign")
 # older version of a package to properly compile. 
 #    * They need to have entries in builddeps.yaml.base
 #    * They need to have versions in R_versions.yaml.base
-archivePackages = c("StanHeaders","XML","tidyr")
+archivePackages = c("StanHeaders","XML","tidyr","odbc")
 
 #cat(pkgList)
 allDeps <- pkgDep(pkgList, availPkgs=allPkgs, suggests=FALSE) 
