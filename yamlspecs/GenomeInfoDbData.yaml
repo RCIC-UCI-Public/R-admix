@@ -7,3 +7,5 @@
   version: "{{versions.GenomeInfoDbData}}"
   src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
   vendor_source: http://bioconductor.org/packages/3.6/data/annotation/src/contrib/{{rpkgname}}_{{version}}.tar.gz 
+  requires:
+    - R_{{versions.R}}

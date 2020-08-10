@@ -2,68 +2,22 @@
 # All rights reserved.	
 # This includes the Generic yaml2rpm Makefile - most packaging should
 # be able to use this.
-ALL_TARGETS = all
-include $(YAML2RPM_HOME)/sys/Makefile
-
-SHELL = /bin/bash
-
-.PHONY: force
-
-## when cleaning temporary yaml files, figure out which ones to not remove
-KEEPYAMLS0 = $(shell cat modules.bootstrap.base | grep -v '^\#' )
-KEEPYAMLS0 += $(shell cat keepyamls | grep -v '^\#' )
-KEEPYAMLS0 += r-pkg R_versions
-KEEPYAMLS = $(patsubst %,%.yaml,$(KEEPYAMLS0))
-TMPYAMLS0 = $(wildcard *.yaml)
-TMPYAMLS = $(filter-out $(KEEPYAMLS),$(TMPYAMLS0))
-
-all: modules.bootstrap versions.yaml bootstrap R_versions.yaml prep 
-	make BOOTSTRAP_MODULES_FILE=modules.bootstrap2 bootstrap
-	make modules.manifest
-        
-prep: modules.build 
-	./downloadpkg.py
-
-builddeps.yaml: modules.desired deps.R
-	( module load R; \
-	  cat deps.R | R --slave > $@  )
-
-R_versions.yaml: outversions.yaml 
-	rm -rf versions.yaml
-	cat outversions.yaml $@.base > $@
-	cat outversions.yaml $@.base > versions.yaml
+SUBMAKES = Makefile.R3 Makefile.R4
+.DEFAULT_GOAL = default
+%.pkg:
+	for f in $(SUBMAKES); do \
+		if [ -f $@ ] ; then /bin/rm $@; fi; \
+		$(MAKE) -f $$f $@; \
+        done
 	
+manifest module-provides module-requires ansible : 
+	for f in $(SUBMAKES); do \
+		$(MAKE) -s -f $$f R_versions.yaml $@; \
+        done
 
-versions.yaml: 
-	cat R_versions.yaml.base > $@
-
-buildorder outversions.yaml: builddeps.yaml 
-	./depend.py > buildorder
-
-modules.bootstrap2: buildorder 
-	cat modules.bootstrap.base buildorder  > modules.bootstrap2
-
-modules.bootstrap:
-	cat $@.base > $@
-
-modules.build: modules.bootstrap2 
-	cat modules.bootstrap2 > $@
-
-manifest: modules.manifest
-
-modules.manifest: force
-	cat modules.bootstrap2 >$@
+%: 	
+	$(MAKE) -f Makefile.R3 $*
+	$(MAKE) -f Makefile.R3 clean
+	$(MAKE) -f Makefile.R4 $*
 	
-freeze: force
-	echo "freezing all yaml files, bootstrap files, buildorder into freeze subdir"
-	if [ ! -d freeze ]; then mkdir freeze; fi
-	cp -p *yaml *bootstrap* modules.build buildorder freeze
-clean:
-	-/bin/rm modules.bootstrap modules.bootstrap2 modules.build
-	-/bin/rm $(TMPYAMLS)
-	-/bin/rm buildorder
-	-/bin/rm builddeps.yaml 
 	
-veryclean:
-	-/bin/rm builddeps.yaml
-

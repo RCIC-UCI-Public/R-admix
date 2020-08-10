@@ -5,7 +5,7 @@
   name: r-module-template 
   versions: !include R_versions.yaml
   rpkgname: "{{name}}"
-  Rversion: "{{versions.R.version}}"
+  Rversion: "{{versions.R}}"
   baserpm: "R_{{Rversion}}-{{name}}"
   src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
   no_src_dir: true

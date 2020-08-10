@@ -1,11 +1,10 @@
 !include rcic-package.yaml
-!include rpm.yaml
 ---
 - package: R statistics 
   name: R 
   versions: !include R_versions.yaml.base
-  version: "{{versions.R.version}}"
-  vendor_source: https://ftp.ussg.iu.edu/CRAN/src/base/R-{{versions.R.major}}/R-{{version}}.{{extension}}
+  version: "{{versions.R}}"
+  vendor_source: https://mirrors.nics.utk.edu/cran/src/base/R-{{versions.Rmajor}}/R-{{version}}.{{extension}}
   release: 2
   description: |
     R {{version}}, built with OpenBLAS v.{{versions.OpenBLAS}} and java v.{{versions.java.version}}.

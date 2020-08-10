@@ -1,6 +1,5 @@
-R:
-  version: "4.0.2"
-  major: "4"
+R: "4.0.2"
+Rmajor: "4"
 OpenBLAS: "0.3.6"
 java:
   version: "1.8.0"
