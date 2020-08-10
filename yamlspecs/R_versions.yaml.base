@@ -13,3 +13,7 @@ mnormt:
   version: "1.5"
   release: "7"
 StanHeaders: "2.19.2"
+XML_release: "0.3"
+XML: "3.99"
+tidyr: "1.1.0"
+
