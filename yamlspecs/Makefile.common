@@ -17,6 +17,7 @@ KEEPYAMLS = $(patsubst %,%.yaml,$(KEEPYAMLS0))
 TMPYAMLS0 = $(wildcard *.yaml)
 TMPYAMLS = $(filter-out $(KEEPYAMLS),$(TMPYAMLS0))
 
+RVERSION = $(shell grep ^R: R4_versions.yaml.base | awk -F \" '{print $$2}')
 all: R_versions.yaml.base modules.bootstrap versions.yaml bootstrap R_versions.yaml prep 
 	make BOOTSTRAP_MODULES_FILE=modules.bootstrap2 bootstrap
 	make modules.manifest
@@ -28,7 +29,7 @@ prep: modules.build
 	./downloadpkg.py
 
 builddeps.yaml: modules.desired deps.R
-	( module load R; \
+	( module load R/$(RVERSION); \
 	  cat deps.R | R --slave > $@  )
 
 R_versions.yaml: outversions.yaml R_versions.yaml.base
@@ -69,4 +70,3 @@ clean:
 	
 veryclean:
 	-/bin/rm builddeps.yaml
-

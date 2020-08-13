@@ -1,8 +1,10 @@
 ## These are yamls that we keep AND depend.py will not overwrite
-StanHeaders
 mnormt
 tmvnsim 
 GenomeInfoDbData
+### Need old versions.
+StanHeaders
+rstan
 XML
 tidyr
 odbc

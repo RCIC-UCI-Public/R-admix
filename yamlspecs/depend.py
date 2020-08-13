@@ -107,6 +107,9 @@ for pkg in resolved:
     try:
         version=r_modules[pkg.name]['version']
         print("%s" % pkg.pkgname)
+        if pkg.pkgname in keep:
+            sys.stderr.write("INFO: Skipping pre-defined package yaml %s\n" % pkg.pkgname)
+            continue
         r=re.search("-",version)
         if r is None:
            template = YAMLTEMPLATE
@@ -124,9 +127,6 @@ for pkg in resolved:
                 appendData = addToF.readlines()
         except:
             appendData = ""
-        if pkg.pkgname in keep:
-            sys.stderr.write("INFO: Skipping pre-defined package yaml %s\n" % pkg.pkgname)
-            continue
         with open("%s.yaml" % pkg.pkgname,"w") as f:
             contents=re.sub("MODULE", pkg.pkgname, template) % (pkg.name,pkg.baseurl)
             f.write(contents)

@@ -4,15 +4,15 @@
 # be able to use this.
 SUBMAKES = Makefile.R3 Makefile.R4
 .DEFAULT_GOAL = default
-%.pkg:
+%.pkg: %.yaml
 	for f in $(SUBMAKES); do \
 		if [ -f $@ ] ; then /bin/rm $@; fi; \
-		$(MAKE) -f $$f $@; \
+		$(MAKE) -f $$f R_versions.yaml $@; \
         done
 	
 manifest module-provides module-requires ansible : 
 	for f in $(SUBMAKES); do \
-		$(MAKE) -s -f $$f R_versions.yaml $@; \
+		$(MAKE) -s -f $$f R_versions.yaml modules.bootstrap2 $@; \
         done
 
 %: 	

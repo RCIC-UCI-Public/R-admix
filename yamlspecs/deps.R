@@ -141,9 +141,8 @@ excludePackages = c("GenomeInfoDbData","tmvnsim", "mnormt", "foreign")
 # These are packages where we only archive the yaml and therefore don't overwrite the
 # yaml file. Otherwise, normally processed. These are usually cases where we need an
 # older version of a package to properly compile. 
-#    * They need to have entries in builddeps.yaml.base
 #    * They need to have versions in R_versions.yaml.base
-archivePackages = c("StanHeaders","XML","tidyr","odbc")
+archivePackages = f <- readLines("keepyamls")
 
 #cat(pkgList)
 allDeps <- pkgDep(pkgList, availPkgs=allPkgs, suggests=FALSE) 
@@ -157,11 +156,6 @@ cat(sprintf("---\n"))
 for (pkg in allDeps) 
 {
         cat(sprintf("PKG %s\n",pkg),file=stderr())
-        if (pkg %in%  archivePackages)
-        {
-            cat(sprintf(" -- PKG %s using archive\n",pkg),file=stderr())
-            next
-        }
 	deps <- pkgDep(pkg,availPkgs=allPkgs,suggests=FALSE)
         pkgInfo = allPkgs[allPkgs[,"Package"] %in% pkg,]
         # cat(sprintf("INFO %s\n",pkgInfo["Repository"]),file=stderr())
@@ -174,4 +168,13 @@ for (pkg in allDeps)
 	 	next	
         for (i in 2:length(deps))
             cat(sprintf("    - %s\n",deps[i]))
+        if (pkg %in%  archivePackages)
+        {
+            cat(sprintf(" -- PKG %s using archive\n",pkg),file=stderr())
+	    cat(sprintf("  archive: True \n"))
+        }
+        else
+        {
+	    cat(sprintf("  archive: False \n"))
+        }
 }
