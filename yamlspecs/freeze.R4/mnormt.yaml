@@ -1,0 +1,13 @@
+!include r-pkg.yaml
+---
+- package: R module mnormt
+  name: mnormt 
+  rpkgname: mnormt
+  versions: !include R_versions.yaml.base
+  version: "{{versions.mnormt.version}}"
+  release: "{{versions.mnormt.release}}"
+  src_tarball: "{{rpkgname}}_{{version}}-{{release}}.{{extension}}"
+  vendor_source: https://cran.r-project.org/src/contrib/Archive/{{name}}/{{name}}_{{version}}-{{release}}.tar.gz
+  requires:
+    - R_{{versions.R}}
+    - R_{{versions.R}}-tmvnsim

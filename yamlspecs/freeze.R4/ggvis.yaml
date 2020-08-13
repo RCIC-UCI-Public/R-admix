@@ -1,0 +1,48 @@
+
+!include r-pkg.yaml
+---
+- package: R module ggvis
+  name: ggvis
+  rpkgname: ggvis
+  version: "{{versions.ggvis}}"
+  baseurl: https://cran.r-project.org/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_{{Rversion}}
+    - R_{{Rversion}}-assertthat
+    - R_{{Rversion}}-jsonlite
+    - R_{{Rversion}}-shiny
+    - R_{{Rversion}}-magrittr
+    - R_{{Rversion}}-dplyr
+    - R_{{Rversion}}-lazyeval
+    - R_{{Rversion}}-htmltools
+    - R_{{Rversion}}-ellipsis
+    - R_{{Rversion}}-generics
+    - R_{{Rversion}}-glue
+    - R_{{Rversion}}-lifecycle
+    - R_{{Rversion}}-R6
+    - R_{{Rversion}}-rlang
+    - R_{{Rversion}}-tibble
+    - R_{{Rversion}}-tidyselect
+    - R_{{Rversion}}-vctrs
+    - R_{{Rversion}}-digest
+    - R_{{Rversion}}-base64enc
+    - R_{{Rversion}}-httpuv
+    - R_{{Rversion}}-mime
+    - R_{{Rversion}}-xtable
+    - R_{{Rversion}}-sourcetools
+    - R_{{Rversion}}-later
+    - R_{{Rversion}}-promises
+    - R_{{Rversion}}-crayon
+    - R_{{Rversion}}-fastmap
+    - R_{{Rversion}}-withr
+    - R_{{Rversion}}-commonmark
+    - R_{{Rversion}}-Rcpp
+    - R_{{Rversion}}-BH
+    - R_{{Rversion}}-cli
+    - R_{{Rversion}}-fansi
+    - R_{{Rversion}}-pillar
+    - R_{{Rversion}}-pkgconfig
+    - R_{{Rversion}}-purrr
+    - R_{{Rversion}}-utf8

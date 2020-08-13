@@ -58,10 +58,10 @@ manifest: modules.manifest
 modules.manifest: force
 	cat modules.bootstrap2 >$@
 	
-freeze: force
-	echo "freezing all yaml files, bootstrap files, buildorder into freeze subdir"
-	if [ ! -d freeze ]; then mkdir freeze; fi
-	cp -p *yaml *bootstrap* modules.build buildorder freeze
+freeze: R_versions.yaml force
+	echo "freezing all yaml files, bootstrap files, buildorder into freeze subdir $(FREEZE_DIR)"
+	if [ ! -d $(FREEZE_DIR) ]; then mkdir $(FREEZE_DIR); fi
+	cp -p *base* *yaml *bootstrap* modules.manifest modules.build buildorder $(FREEZE_DIR) 
 clean:
 	-/bin/rm modules.bootstrap modules.bootstrap2 modules.build
 	-/bin/rm $(TMPYAMLS)

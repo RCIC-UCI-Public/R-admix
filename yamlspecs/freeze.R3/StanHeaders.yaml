@@ -1,0 +1,11 @@
+
+!include r-pkg.yaml
+---
+- package: R module StanHeaders
+  name: StanHeaders
+  rpkgname: StanHeaders
+  version: "{{versions.StanHeaders}}"
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: https://cran.r-project.org/src/contrib/Archive/{{rpkgname}}/{{rpkgname}}_{{version}}.tar.gz
+  requires:
+    - R_{{Rversion}}

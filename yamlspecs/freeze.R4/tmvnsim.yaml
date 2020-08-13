@@ -1,0 +1,12 @@
+!include r-pkg.yaml
+---
+- package: R module tmvnsim
+  name: tmvnsim 
+  rpkgname: tmvnsim
+  versions: !include R_versions.yaml.base
+  version: "{{versions.tmvnsim.version}}"
+  release: "{{versions.tmvnsim.release}}"
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: https://cran.r-project.org/src/contrib/{{name}}_{{version}}-{{release}}.tar.gz 
+  requires:
+    - R_{{versions.R}}

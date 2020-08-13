@@ -1,0 +1,36 @@
+
+!include r-pkg.yaml
+---
+- package: R module annotate
+  name: annotate
+  rpkgname: annotate
+  version: "{{versions.annotate}}"
+  baseurl: http://bioconductor.org/packages/release/bioc/src/contrib
+  src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
+  vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
+  requires:
+    - R_{{Rversion}}
+    - R_{{Rversion}}-AnnotationDbi
+    - R_{{Rversion}}-XML
+    - R_{{Rversion}}-Biobase
+    - R_{{Rversion}}-DBI
+    - R_{{Rversion}}-xtable
+    - R_{{Rversion}}-BiocGenerics
+    - R_{{Rversion}}-RCurl
+    - R_{{Rversion}}-IRanges
+    - R_{{Rversion}}-RSQLite
+    - R_{{Rversion}}-S4Vectors
+    - R_{{Rversion}}-bitops
+    - R_{{Rversion}}-bit64
+    - R_{{Rversion}}-blob
+    - R_{{Rversion}}-memoise
+    - R_{{Rversion}}-pkgconfig
+    - R_{{Rversion}}-Rcpp
+    - R_{{Rversion}}-BH
+    - R_{{Rversion}}-plogr
+    - R_{{Rversion}}-bit
+    - R_{{Rversion}}-rlang
+    - R_{{Rversion}}-vctrs
+    - R_{{Rversion}}-digest
+    - R_{{Rversion}}-ellipsis
+    - R_{{Rversion}}-glue

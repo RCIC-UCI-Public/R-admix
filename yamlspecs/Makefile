@@ -10,11 +10,22 @@ SUBMAKES = Makefile.R3 Makefile.R4
 		$(MAKE) -f $$f R_versions.yaml $@; \
         done
 	
-manifest module-provides module-requires ansible : 
+manifest module-provides module-requires: 
 	for f in $(SUBMAKES); do \
 		$(MAKE) -s -f $$f R_versions.yaml modules.bootstrap2 $@; \
         done
 
+ansible freeze: force
+	for f in $(SUBMAKES); do \
+		$(MAKE) -s -f $$f R_versions.yaml $@; \
+        done
+
+%: 	
+	$(MAKE) -f Makefile.R3 $*
+	$(MAKE) -f Makefile.R3 clean
+	$(MAKE) -f Makefile.R4 $*
+	
+	
 %: 	
 	$(MAKE) -f Makefile.R3 $*
 	$(MAKE) -f Makefile.R3 clean

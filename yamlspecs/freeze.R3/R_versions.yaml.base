@@ -1,0 +1,22 @@
+R: "3.6.2"
+Rmajor: "3"
+OpenBLAS: "0.3.6"
+java:
+  version: "1.8.0"
+  name: java8
+icu: "65.1"
+GenomeInfoDbData: "1.0.0"
+tmvnsim: 
+  version: "1.0"
+  release: "2"
+mnormt: 
+  version: "1.5"
+  release: "7"
+## Need Fixed versions. Newer versions have compat issues
+StanHeaders: "2.19.2"
+rstan: "2.19.3"
+XML_release: "0.3"
+XML: "3.99"
+odbc: "1.2.2"
+tidyr: "1.1.0"
+

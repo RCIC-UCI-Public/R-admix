@@ -1,0 +1,20 @@
+# Builds the module for R. 
+!include R.yaml
+!include rcic-module.yaml
+---
+- package: R Module
+  category: LANGUAGES
+  release: 2
+  module:
+    lib: lib64
+    setenv:
+      - *Setenv
+    prereq:
+      - OpenBLAS/{{versions.OpenBLAS}}
+      - java/{{versions.java.version}}
+      - icu/{{versions.icu}}
+    requires:
+      - *Requires
+      - OpenBLAS_{{versions.OpenBLAS}}-module
+      - "{{versions.java.name}}-module"
+      - icu_{{versions.icu}}-module
