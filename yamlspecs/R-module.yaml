@@ -4,7 +4,7 @@
 ---
 - package: R Module
   category: LANGUAGES
-  release: 2
+  release: 3
   module:
     lib: lib64
     setenv:
@@ -15,6 +15,4 @@
       - icu/{{versions.icu}}
     requires:
       - *Requires
-      - OpenBLAS_{{versions.OpenBLAS}}-module
-      - "{{versions.java.name}}-module"
-      - icu_{{versions.icu}}-module
+      - "{{module.prereq}}"
