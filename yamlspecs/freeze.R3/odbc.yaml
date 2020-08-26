@@ -5,7 +5,7 @@
   name: odbc
   rpkgname: odbc
   version: "{{versions.odbc}}"
-  baseurl: https://cran.r-project.org/src/contrib
+  baseurl: https://cran.r-project.org/src/contrib/Archive/{{rpkgname}}
   src_tarball: "{{rpkgname}}_{{version}}.{{extension}}"
   vendor_source: "{{baseurl}}/{{rpkgname}}_{{version}}.{{extension}}"
   requires:

@@ -11,4 +11,3 @@
   requires:
     - R_{{Rversion}}
     - R_{{Rversion}}-mnormt
-    - R_{{Rversion}}-tmvnsim
