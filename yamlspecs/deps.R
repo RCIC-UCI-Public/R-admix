@@ -156,18 +156,25 @@ cat(sprintf("---\n"))
 for (pkg in allDeps) 
 {
         cat(sprintf("PKG %s\n",pkg),file=stderr())
-	deps <- pkgDep(pkg,availPkgs=allPkgs,suggests=FALSE)
-        pkgInfo = allPkgs[allPkgs[,"Package"] %in% pkg,]
-        # cat(sprintf("INFO %s\n",pkgInfo["Repository"]),file=stderr())
-
-	cat(sprintf("%s : \n",deps[1]))
-	cat(sprintf("  baseurl : \"%s\"\n",pkgInfo["Repository"]))
-	cat(sprintf("  version : \"%s\"\n",pkgInfo["Version"]))
-	cat(sprintf("  requires : \n"))
-        if ( length(deps) == 1 )
-	 	next	
-        for (i in 2:length(deps))
-            cat(sprintf("    - %s\n",deps[i]))
+        tryCatch( {
+           deps <- pkgDep(pkg,availPkgs=allPkgs,suggests=FALSE)
+           pkgInfo = allPkgs[allPkgs[,"Package"] %in% pkg,]
+           # cat(sprintf("INFO %s\n",pkgInfo["Repository"]),file=stderr())
+	   cat(sprintf("%s : \n",deps[1]))
+	   cat(sprintf("  baseurl : \"%s\"\n",pkgInfo["Repository"]))
+	   cat(sprintf("  version : \"%s\"\n",pkgInfo["Version"]))
+	   cat(sprintf("  requires : \n"))
+           if ( length(deps) > 1 )
+               for (i in 2:length(deps))
+                   cat(sprintf("    - %s\n",deps[i]))
+        },
+        error = function(e) {
+           cat(sprintf("Caught error %s for PKG %s\n", e, pkg), file=stderr())
+	   cat(sprintf("%s : \n",pkg))
+	   cat(sprintf("  version :  \"unknown\"\n"))
+	   cat(sprintf("  requires : \n"))
+        } 
+        )
         if (pkg %in%  archivePackages)
         {
             cat(sprintf(" -- PKG %s using archive\n",pkg),file=stderr())
