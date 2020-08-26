@@ -17,10 +17,10 @@ KEEPYAMLS = $(patsubst %,%.yaml,$(KEEPYAMLS0))
 TMPYAMLS0 = $(wildcard *.yaml)
 TMPYAMLS = $(filter-out $(KEEPYAMLS),$(TMPYAMLS0))
 
-RVERSION = $(shell grep ^R: R4_versions.yaml.base | awk -F \" '{print $$2}')
+RVERSION = $(shell grep ^R: $(BASE_VERSION_FILE) | awk -F \" '{print $$2}')
 all: R_versions.yaml.base modules.bootstrap versions.yaml bootstrap R_versions.yaml prep 
-	make BOOTSTRAP_MODULES_FILE=modules.bootstrap2 bootstrap
-	make modules.manifest
+	make -f Makefile$(MAKEFILE_SUFFIX) BOOTSTRAP_MODULES_FILE=modules.bootstrap2 bootstrap
+	make -f Makefile$(MAKEFILE_SUFFIX) modules.manifest
         
 R_versions.yaml.base: force
 	cat $(BASE_VERSION_FILE) $@.common > $@

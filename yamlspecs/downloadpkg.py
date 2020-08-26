@@ -5,13 +5,15 @@ import subprocess
 import yaml
 from os import path
 BUILDDEPS = "builddeps.yaml"
-BOOTSTRAP = "modules.bootstr"
 #R_MODULE = "R/3.6.2"
 RTEMPLATE = """
 module load %s;
 echo 'download.packages("%s",destdir="../sources", repos=c("https://cran.r-project.org","http://bioconductor.org/packages/release/bioc","https://mc-stan.org/r-packages/"))' | R --slave
 """
 
+MAKEFILE_SUFFIX = '.R3'
+if len(sys.argv) > 1:
+   MAKEFILE_SUFFIX = sys.argv[1]
 
 def name_mangle(name):
     return name.replace(".","_")
@@ -34,6 +36,6 @@ for pkg in allPkgs.keys():
 #        	proc = subprocess.Popen(["/bin/bash"],stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 #        	(output,err) = proc.communicate(RTEMPLATE % (R_MODULE,pkg))
 #        else:
-       	proc = subprocess.Popen(["make","download","PKG=%s" % name_mangle(pkg)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+       	proc = subprocess.Popen(["make","-f", "Makefile%s" % MAKEFILE_SUFFIX, "download","PKG=%s" % name_mangle(pkg)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
        	(output,err) = proc.communicate()
 
