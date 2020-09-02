@@ -4,7 +4,7 @@
 ---
 - package: R Module
   category: LANGUAGES
-  release: 3
+  release: 4
   module:
     lib: lib64
     setenv:
