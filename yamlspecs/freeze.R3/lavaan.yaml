@@ -14,4 +14,3 @@
     - R_{{Rversion}}-mnormt
     - R_{{Rversion}}-pbivnorm
     - R_{{Rversion}}-numDeriv
-    - R_{{Rversion}}-tmvnsim

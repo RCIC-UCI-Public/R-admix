@@ -4,6 +4,7 @@ BayesCombo :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0"
   requires : 
+  archive: False 
 BayesFactor : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.9.12-4.2"
@@ -31,10 +32,12 @@ BiocGenerics :
   baseurl : "http://bioconductor.org/packages/release/bioc/src/contrib"
   version : "0.34.0"
   requires : 
+  archive: False 
 BiocManager : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.30.10"
   requires : 
+  archive: False 
 brms : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.13.5"
@@ -156,7 +159,7 @@ brms :
   archive: False 
 car : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "3.0-8"
+  version : "3.0-9"
   requires : 
     - carData
     - abind
@@ -487,10 +490,12 @@ dichromat :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.0-0"
   requires : 
+  archive: False 
 digest : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.6.25"
   requires : 
+  archive: False 
 doBy : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "4.6.7"
@@ -563,9 +568,10 @@ dotCall64 :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0-0"
   requires : 
+  archive: False 
 dplyr : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "1.0.1"
+  version : "1.0.2"
   requires : 
     - ellipsis
     - generics
@@ -636,6 +642,7 @@ fansi :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.4.1"
   requires : 
+  archive: False 
 fields : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "10.3"
@@ -683,6 +690,7 @@ getopt :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.20.3"
   requires : 
+  archive: False 
 ggmap : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3.0.0"
@@ -953,6 +961,7 @@ git2r :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.27.1"
   requires : 
+  archive: False 
 glmnet : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "4.0-2"
@@ -991,6 +1000,7 @@ gtable :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3.0"
   requires : 
+  archive: False 
 haven : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.3.1"
@@ -1220,6 +1230,7 @@ labeling :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3"
   requires : 
+  archive: False 
 Lahman : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "8.0-0"
@@ -1253,12 +1264,12 @@ lavaan :
     - mnormt
     - pbivnorm
     - numDeriv
-    - tmvnsim
   archive: False 
 lazyeval : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.2.2"
   requires : 
+  archive: False 
 leaflet : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.0.3"
@@ -1376,6 +1387,7 @@ magrittr :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.5"
   requires : 
+  archive: False 
 mapproj : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.2.7"
@@ -1386,9 +1398,10 @@ maps :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3.3.0"
   requires : 
+  archive: False 
 maptools : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "1.0-1"
+  version : "1.0-2"
   requires : 
     - sp
     - foreign
@@ -1415,6 +1428,7 @@ mime :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.9"
   requires : 
+  archive: False 
 miniCRAN : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.2.13"
@@ -1671,6 +1685,7 @@ proto :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0.0"
   requires : 
+  archive: False 
 psych : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.0.7"
@@ -1678,7 +1693,6 @@ psych :
     - mnormt
     - lattice
     - nlme
-    - tmvnsim
   archive: False 
 quantmod : 
   baseurl : "https://cran.r-project.org/src/contrib"
@@ -1757,14 +1771,17 @@ R6 :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.4.1"
   requires : 
+  archive: False 
 randomForest : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "4.6-14"
   requires : 
+  archive: False 
 Rcpp : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0.5"
   requires : 
+  archive: False 
 RcppGSL : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3.8"
@@ -1830,6 +1847,7 @@ rlang :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.4.7"
   requires : 
+  archive: False 
 RMySQL : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.10.20"
@@ -1923,11 +1941,12 @@ rstan :
     - pkgload
     - praise
     - rstudioapi
-  archive: False 
+  archive: True 
 rstudioapi : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.11"
   requires : 
+  archive: False 
 scales : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1.1"
@@ -2086,6 +2105,7 @@ shape :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4.4"
   requires : 
+  archive: False 
 shiny : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.5.0"
@@ -2115,6 +2135,7 @@ sm :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.2-5.6"
   requires : 
+  archive: False 
 sp : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4-2"
@@ -2131,6 +2152,7 @@ stargazer :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "5.2.2"
   requires : 
+  archive: False 
 stringr : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4.0"
@@ -2315,14 +2337,17 @@ viridisLite :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3.0"
   requires : 
+  archive: False 
 whisker : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.4"
   requires : 
+  archive: False 
 withr : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.2.0"
   requires : 
+  archive: False 
 XLConnect : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0.1"
@@ -2340,6 +2365,7 @@ xtable :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.8-4"
   requires : 
+  archive: False 
 xts : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.12-0"
@@ -2367,16 +2393,19 @@ Matrix :
   archive: False 
 pbapply : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "1.4-2"
+  version : "1.4-3"
   requires : 
+  archive: False 
 mvtnorm : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1-1"
   requires : 
+  archive: False 
 gtools : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3.8.2"
   requires : 
+  archive: False 
 MatrixModels : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.4-1"
@@ -2405,6 +2434,7 @@ lattice :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.20-41"
   requires : 
+  archive: False 
 elliptic : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4-0"
@@ -2415,22 +2445,27 @@ contfrac :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1-12"
   requires : 
+  archive: False 
 deSolve : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.28"
   requires : 
+  archive: False 
 glue : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4.1"
   requires : 
+  archive: False 
 stringi : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4.6"
   requires : 
+  archive: False 
 MASS : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "7.3-51.6"
+  version : "7.3-52"
   requires : 
+  archive: False 
 loo : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.3.1"
@@ -2441,7 +2476,7 @@ loo :
   archive: False 
 mgcv : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "1.8-31"
+  version : "1.8-32"
   requires : 
     - nlme
     - Matrix
@@ -2655,13 +2690,15 @@ matrixStats :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.56.0"
   requires : 
+  archive: False 
 nleqslv : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3.3.2"
   requires : 
+  archive: False 
 nlme : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "3.1-148"
+  version : "3.1-149"
   requires : 
     - lattice
   archive: False 
@@ -2669,6 +2706,7 @@ abind :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4-5"
   requires : 
+  archive: False 
 future : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.18.0"
@@ -2680,8 +2718,9 @@ future :
   archive: False 
 backports : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "1.1.8"
+  version : "1.1.9"
   requires : 
+  archive: False 
 ggridges : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.5.2"
@@ -2750,6 +2789,7 @@ Brobdingnag :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.2-6"
   requires : 
+  archive: False 
 globals : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.12.5"
@@ -2760,6 +2800,7 @@ listenv :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.8.0"
   requires : 
+  archive: False 
 isoband : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.2.2"
@@ -2797,7 +2838,7 @@ checkmate :
   archive: False 
 StanHeaders : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "2.21.0-5"
+  version : "2.21.0-6"
   requires : 
     - RcppParallel
     - RcppEigen
@@ -2809,10 +2850,12 @@ inline :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3.15"
   requires : 
+  archive: False 
 RcppParallel : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "5.0.2"
   requires : 
+  archive: False 
 pkgbuild : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1.0"
@@ -2844,6 +2887,7 @@ BH :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.72.0-3"
   requires : 
+  archive: False 
 desc : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.2.0"
@@ -3007,6 +3051,7 @@ jsonlite :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.7.0"
   requires : 
+  archive: False 
 miniUI : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.1.1.1"
@@ -3037,10 +3082,12 @@ assertthat :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.2.1"
   requires : 
+  archive: False 
 crayon : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.3.4"
   requires : 
+  archive: False 
 rprojroot : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.3-2"
@@ -3057,6 +3104,7 @@ generics :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.0.2"
   requires : 
+  archive: False 
 lifecycle : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.2.0"
@@ -3100,6 +3148,7 @@ codetools :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.2-16"
   requires : 
+  archive: False 
 testthat : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.3.2"
@@ -3132,6 +3181,7 @@ xfun :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.16"
   requires : 
+  archive: False 
 callr : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3.4.3"
@@ -3144,10 +3194,12 @@ prettyunits :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1.1"
   requires : 
+  archive: False 
 curl : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "4.3"
   requires : 
+  archive: False 
 openssl : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4.2"
@@ -3159,18 +3211,22 @@ packrat :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.5.0"
   requires : 
+  archive: False 
 yaml : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.2.1"
   requires : 
+  archive: False 
 farver : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.0.3"
   requires : 
+  archive: False 
 RColorBrewer : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1-2"
   requires : 
+  archive: False 
 httpuv : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.5.4"
@@ -3187,6 +3243,7 @@ sourcetools :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.1.7"
   requires : 
+  archive: False 
 later : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1.0.1"
@@ -3199,18 +3256,22 @@ fastmap :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0.1"
   requires : 
+  archive: False 
 commonmark : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.7"
   requires : 
+  archive: False 
 base64enc : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.1-3"
   requires : 
+  archive: False 
 pkgconfig : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.0.3"
   requires : 
+  archive: False 
 purrr : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3.4"
@@ -3229,6 +3290,7 @@ colorspace :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4-1"
   requires : 
+  archive: False 
 askpass : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1"
@@ -3239,10 +3301,12 @@ utf8 :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1.4"
   requires : 
+  archive: False 
 evaluate : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.14"
   requires : 
+  archive: False 
 pkgload : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1.0"
@@ -3269,22 +3333,27 @@ praise :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0.0"
   requires : 
+  archive: False 
 sys : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3.4"
   requires : 
+  archive: False 
 ps : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "1.3.3"
+  version : "1.3.4"
   requires : 
+  archive: False 
 carData : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3.0-4"
   requires : 
+  archive: False 
 nnet : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "7.3-14"
   requires : 
+  archive: False 
 pbkrtest : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.4-8.6"
@@ -3360,6 +3429,7 @@ boot :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.3-25"
   requires : 
+  archive: False 
 minqa : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.2.4"
@@ -3370,14 +3440,17 @@ nloptr :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.2.2.2"
   requires : 
+  archive: False 
 statmod : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4.34"
   requires : 
+  archive: False 
 SparseM : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.78"
   requires : 
+  archive: False 
 conquer : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0.1"
@@ -3392,6 +3465,7 @@ data.table :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.13.0"
   requires : 
+  archive: False 
 readxl : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.3.1"
@@ -3493,6 +3567,7 @@ zip :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.1.0"
   requires : 
+  archive: False 
 cellranger : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1.0"
@@ -3533,10 +3608,12 @@ rematch :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0.1"
   requires : 
+  archive: False 
 clipr : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.7.0"
   requires : 
+  archive: False 
 foreach : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.5.0"
@@ -3607,10 +3684,12 @@ iterators :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0.12"
   requires : 
+  archive: False 
 gower : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.2.2"
   requires : 
+  archive: False 
 ipred : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.9-9"
@@ -3633,10 +3712,12 @@ timeDate :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3043.102"
   requires : 
+  archive: False 
 rpart : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "4.1-15"
   requires : 
+  archive: False 
 survival : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3.2-3"
@@ -3665,12 +3746,14 @@ prodlim :
   archive: False 
 cpp11 : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "0.2.0"
+  version : "0.2.1"
   requires : 
+  archive: False 
 KernSmooth : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.23-17"
   requires : 
+  archive: False 
 lava : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.6.7"
@@ -3685,10 +3768,12 @@ numDeriv :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2016.8-1.1"
   requires : 
+  archive: False 
 SQUAREM : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2020.3"
   requires : 
+  archive: False 
 S4Vectors : 
   baseurl : "http://bioconductor.org/packages/release/bioc/src/contrib"
   version : "0.26.1"
@@ -3836,6 +3921,7 @@ snow :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.4-3"
   requires : 
+  archive: False 
 AnnotationDbi : 
   baseurl : "http://bioconductor.org/packages/release/bioc/src/contrib"
   version : "1.50.3"
@@ -3921,13 +4007,14 @@ DelayedArray :
     - lattice
   archive: False 
 XML : 
-  baseurl : "https://cran.r-project.org/src/contrib"
-  version : "3.99-0.5"
+  version :  "unknown"
   requires : 
+  archive: True 
 DBI : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1.0"
   requires : 
+  archive: False 
 RCurl : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.98-1.2"
@@ -3944,18 +4031,22 @@ futile.options :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0.1"
   requires : 
+  archive: False 
 zlibbioc : 
   baseurl : "http://bioconductor.org/packages/release/bioc/src/contrib"
   version : "1.34.0"
   requires : 
+  archive: False 
 formatR : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.7"
   requires : 
+  archive: False 
 bitops : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0-6"
   requires : 
+  archive: False 
 bit64 : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "4.0.2"
@@ -3982,10 +4073,12 @@ plogr :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.2.0"
   requires : 
+  archive: False 
 bit : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "4.0.4"
   requires : 
+  archive: False 
 usethis : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.6.1"
@@ -4086,6 +4179,7 @@ remotes :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.2.0"
   requires : 
+  archive: False 
 roxygen2 : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "7.1.1"
@@ -4161,14 +4255,17 @@ brew :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0-6"
   requires : 
+  archive: False 
 xml2 : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.3.2"
   requires : 
+  archive: False 
 fs : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.5.0"
   requires : 
+  archive: False 
 gh : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1.0"
@@ -4212,14 +4309,17 @@ ini :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3.1"
   requires : 
+  archive: False 
 highr : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.8"
   requires : 
+  archive: False 
 Deriv : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "4.0"
+  version : "4.0.1"
   requires : 
+  archive: False 
 broom : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.7.0"
@@ -4254,6 +4354,7 @@ limma :
   baseurl : "http://bioconductor.org/packages/release/bioc/src/contrib"
   version : "3.44.3"
   requires : 
+  archive: False 
 RgoogleMaps : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4.5.3"
@@ -4266,14 +4367,17 @@ png :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.1-7"
   requires : 
+  archive: False 
 rjson : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.2.20"
   requires : 
+  archive: False 
 jpeg : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.1-8.1"
   requires : 
+  archive: False 
 ggrepel : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.8.2"
@@ -4479,6 +4583,7 @@ polynom :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4-0"
   requires : 
+  archive: False 
 rstatix : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.6.0"
@@ -4557,6 +4662,7 @@ corrplot :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.84"
   requires : 
+  archive: False 
 gdata : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.18.0"
@@ -4573,6 +4679,7 @@ Formula :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.2-3"
   requires : 
+  archive: False 
 latticeExtra : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.6-29"
@@ -4586,6 +4693,7 @@ cluster :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.1.0"
   requires : 
+  archive: False 
 htmlTable : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.0.1"
@@ -4707,10 +4815,12 @@ pbdZMQ :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3-3"
   requires : 
+  archive: False 
 uuid : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.1-4"
   requires : 
+  archive: False 
 rvest : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3.6"
@@ -4783,6 +4893,7 @@ pbivnorm :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.6.0"
   requires : 
+  archive: False 
 raster : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3.3-13"
@@ -4795,6 +4906,7 @@ leaflet.providers :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.9.0"
   requires : 
+  archive: False 
 sandwich : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.5-1"
@@ -4831,6 +4943,7 @@ mcmc :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.9-7"
   requires : 
+  archive: False 
 FactoMineR : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.3"
@@ -4971,18 +5084,22 @@ ellipse :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.4.2"
   requires : 
+  archive: False 
 flashClust : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.01-2"
   requires : 
+  archive: False 
 leaps : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "3.1"
   requires : 
+  archive: False 
 scatterplot3d : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3-41"
   requires : 
+  archive: False 
 TH.data : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0-10"
@@ -4996,6 +5113,7 @@ bdsmatrix :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.3-4"
   requires : 
+  archive: False 
 lmtest : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.9-37"
@@ -5043,6 +5161,7 @@ gbRd :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.4-11"
   requires : 
+  archive: False 
 TTR : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.24.0"
@@ -5143,6 +5262,7 @@ R.methodsS3 :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.8.0"
   requires : 
+  archive: False 
 R.oo : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.23.0"
@@ -5199,7 +5319,7 @@ manipulateWidget :
   archive: False 
 ape : 
   baseurl : "https://cran.r-project.org/src/contrib"
-  version : "5.4"
+  version : "5.4-1"
   requires : 
     - nlme
     - lattice
@@ -5228,6 +5348,7 @@ ica :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.0-2"
   requires : 
+  archive: False 
 irlba : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.3.3"
@@ -5378,6 +5499,7 @@ RANN :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "2.6.1"
   requires : 
+  archive: False 
 RcppAnnoy : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.0.16"
@@ -5518,6 +5640,7 @@ RcppProgress :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.4.2"
   requires : 
+  archive: False 
 hexbin : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.28.1"
@@ -5528,6 +5651,7 @@ rappdirs :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.3.1"
   requires : 
+  archive: False 
 spatstat.data : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.4-3"
@@ -5540,26 +5664,32 @@ spatstat.utils :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.17-0"
   requires : 
+  archive: False 
 deldir : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.1-28"
   requires : 
+  archive: False 
 tensor : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.5"
   requires : 
+  archive: False 
 polyclip : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.10-0"
   requires : 
+  archive: False 
 goftest : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.2-2"
   requires : 
+  archive: False 
 FNN : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "1.1.3"
   requires : 
+  archive: False 
 RSpectra : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.16-0"
@@ -5676,6 +5806,7 @@ rJava :
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.9-13"
   requires : 
+  archive: False 
 xlsxjars : 
   baseurl : "https://cran.r-project.org/src/contrib"
   version : "0.6.1"

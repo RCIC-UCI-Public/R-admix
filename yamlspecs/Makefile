@@ -20,15 +20,10 @@ ansible freeze: force
 		$(MAKE) -s -f $$f R_versions.yaml $@; \
         done
 
+download:
+	echo "Use a specific Makefile from $(SUBMAKES) to download packages"
+
 %: 	
 	$(MAKE) -f Makefile.R3 $*
 	$(MAKE) -f Makefile.R3 clean
 	$(MAKE) -f Makefile.R4 $*
-	
-	
-%: 	
-	$(MAKE) -f Makefile.R3 $*
-	$(MAKE) -f Makefile.R3 clean
-	$(MAKE) -f Makefile.R4 $*
-	
-	
