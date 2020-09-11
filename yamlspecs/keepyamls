@@ -1,3 +1,6 @@
+# rstudio is a separate program
+rstudio
+rstudio-module
 ## These are yamls that we keep AND depend.py will not overwrite
 mnormt
 tmvnsim 
